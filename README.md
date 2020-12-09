@@ -18,6 +18,9 @@ Our current web pages on the running site include:
 |Big Idea: 3 Algorithmns and Programs | |
 |Big Idea: 4 Computing Systems and Programming | |
 |Big Idea: 5 Impact of Computing | |
+#Code History
+* week of 12/7: started research and basic template planning of website
+* week of 11/30: created respos, file, and README
 ## Authors
 * Andrea Abed
 * Diane Tang
