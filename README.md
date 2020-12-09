@@ -2,7 +2,7 @@
 ![add gif later]()
 
 Hi! This is our website project (cuisine title) by p4 Buffalo during winter 2020.
-#Add Cuisine title later
+# Add Cuisine title later
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
 There will be different restuarants information avaliable on each page sorted by location all falling under different cuisines. There will be a database storing these restaurants that you can search through by cuisines and favorite your favorite food by logging in. 
 #How to Use
