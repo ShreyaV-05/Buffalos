@@ -1,7 +1,7 @@
 # Team Buffalos
 ![add gif later](https://www.food-management.com/sites/food-management.com/files/international-food-thinkstock-promo.png)
 
-Hi! This is our website project (cuisine title) by p4 Buffalo during winter 2020.
+Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 # Cuisines
 ## Website Summary
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
