@@ -24,7 +24,9 @@ Would have seven tabs so far, with dropdown menu
 * san fran cuisine
 * search engine where searched cuisines will pop up
 * page with restaurants that specifically offer outdoor seating 
-* least expensive to most expensive organized by places
+* least expensive to most expensive organized by places'
+* layout of two tabs:
+file:///Users/shreya/Desktop/IMG_0553.JPG
 
 # How to Use
 This program is relatively easy to run. First, run app.py. In the app.py terminal, a linked IP address should appear. Click this link and it will guide you to our website. There is a navigation bar at the top that will allow you to go to any of our web pages. Most of our pages are still works in progress but please look forward to them as we finish and polish them.
