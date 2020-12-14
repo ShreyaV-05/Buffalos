@@ -6,7 +6,7 @@ from wtforms.validators import InputRequired,Email,Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
-import projects
+
 
 
 app = Flask(__name__)
