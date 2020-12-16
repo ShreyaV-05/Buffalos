@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{name}} | Berlin </title>
+<head>
+    <style>
+ #myBG {
+    background-image: url('//img2.storyblok.com/1366x400/smart/filters:format(jpeg)/f/53624/4096x1260/149c4145e5/germany_4096x1260.png');
+    background-size: 100% 300px;
+ }
+ #Hotel {
+     background-image: url('https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2018/02/THE-FAIRMONT-HOTEL-VIER-JAHRESZEITEN-HAMBURG.jpg?fit=970%2C545&ssl=1');
+     text-align:center;
+     width: 385px;
+     height: 216.3147px;
+     background-size: 385px 216.3147px;
+     color: white;
+     text-shadow: 2px 2px black;
+ }
+ #Restaurant {
+     background-image: url('https://www.elitetraveler.com/wp-content/uploads/2012/12/facil1.jpg');
+     text-align:center;
+     width: 385px;
+     height: 288.5px;
+     background-size: 385px 288.5px;
+     color: white;
+     text-shadow: 2px 2px black;
+ }
+ .box {
+     background-image: url('https://www.kovifabrics.com/img/thumbs/de9dd38b70e615ef91c5677d7104e0c1.JPG');
+     color: black;
+     border: 5px solid green;
+     padding: 40px;
+ }
+</style>
+</head>
+{% endblock %}
+
+<!-- Project  Information  -->
+{% block title %}
+<div id="myBG">
+    <h1>Germany</h1>
+    <pre style="color:white; font-size:18px;">Travel to Germany! The birthplace of cars and hamburgers
+    </pre>
+    <pre style="color:white;">By Ethan Sun
+    </pre>
+</div>
+{% endblock %}
+
+{% block hotspot1 %}
+<div>
+    <h2>Hot spots</h2>
+    <hr>
+    <h3>Brandenburg Gate</h3>
+    <img src="https://www.visitberlin.de/system/files/styles/visitberlin_gallery_item_visitberlin_mobile_1x/private/image/iStock_26486275_istock.com_sborisov_DL_PPT_0.jpg?itok=TpqLRstm" alt="Brandenburg Gate" style="width:300px;height:200px;">
+    <pre style="color:DarkSlateGrey;">
+    The Brandenburg Gate is a historical
+    site representing the unity between
+    east and west berlin after the Cold
+    War era.
+    </pre>
+    <hr>
+    <h3>Berlin Wall</h3>
+    <img src="https://www.dailybulletin.com/wp-content/uploads/2017/08/news_170819487_ar_0_oumpfsftpvco.jpg" alt="Berlin Wall" style="width:300px;height:224px;">
+    <pre style="color:DarkSlateGrey;">
+    The Berlin Wall is estimated at 27
+    miles wide dividing the east side
+    of Berlin from the west. The Berlin
+    Wall stands as a historical land
+    mark of Germany and is a site to
+    not miss out on.
+    </pre>
+    <hr>
+    <h3>Victory Column</h3>
+    <img src="https://2.bp.blogspot.com/-jSBQ7JEs1io/TkxlE9-OAjI/AAAAAAAAAFo/zONTbM3Sm54/s1600/Berlin+2011+002+ld.jpg" alt="Victory Column" style="width:300px;height:450px;">
+    <pre style="color:DarkSlateGrey;">
+    The Victory Column is a 219ft
+    historical statue that commemorates
+    the victory in the Danish-Prussian
+    War. It is massive and a sight to
+    not miss out on.
+    </pre>
+</div>
+{% endblock %}
+
+{% block hotspot2 %}
+<div class="box">
+    <h3>Top Hotels</h3>
+    <hr>
+    <div id="Hotel">
+        <h2>Breidenbacher<br>Hof</h2>
+        <a href="https://www.capellahotels.com/en/capella-dusseldorf" style="color: white;">https://www.capellahotels.com/en/capella-dusseldorf</a>
+    </div>
+    <pre style="color:DarkSlateGrey; font-size:75%; overflow-x: hidden; max-width: 100%; background-color: burlywood; border: 5px darkgoldenrod;">
+"Inspired by the history of the iconic Königsallee,
+our Breidenbacher Hof luxury hotel is imbued with
+more than two-hundred years of stories yet designed
+for thoroughly modern indulgence. Located in the
+heart of Düsseldorf's vibrant downtown, our 5 star
+hotel is well-placed to enjoy the city’s cultural
+sights, before returning to an evening of signature
+dishes in our new restaurant The Duchy."
+        </pre>
+</div>
+
+<div class="box">
+    <h3>Top Restaurants</h3>
+    <hr>
+    <div id="Restaurant">
+        <h2>Restaurant<br>Facil</h2>
+        <a href="https://facil.de/de/" style="color: white;">https://facil.de/de/</a>
+    </div>
+    <pre style="color:DarkSlateGrey; font-size:75%; overflow-x: hidden; max-width: 100%; background-color: burlywood; border: 5px darkgoldenrod;">
+"Awarded with two Michelin Stars, 19
+Gault & Millau points and 4.5 F Der Feinschmecker
+the Restaurant FACIL on Potsdamer Platz located at
+The Mandala Hotel is reknowned for its excellence
+far beyond Berlin's city limits. It's now up to you
+the experience this elegant gourmet restaurant
+first-hand. Give your taste buds a treat with
+the unusual yet unique flavour compositions. Under
+culinary director Michael Kempf, chef Joachim Gerner
+and the team of Restaurant FACIL creates finely
+crafted and detailed dishes.Classic dishes are
+interpreted anew with exclusive use of regional
+and seasonal products."
+        </pre>
+</div>
+{% endblock %}
+
+{% block hotspot3 %}
+
+{% endblock %}
