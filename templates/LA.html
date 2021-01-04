@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}
+{% endblock %}
 
-</body>
-</html>
+
+
+{% block content %}
+<h1 style="color:##; text-align:center "> Los Angles Restaurants </h1>
+
+[{"id": "Badmaash","description":"An indian restaurant with authentic dhaba food like Daal Makhni and Chicken Tikka Masala served with Indian bread called Tandoori Naan","Website link":"https://www.badmaashla.com/welcome/#menu-section","Location":"https://www.google.com/maps/dir//BADMAASH/@33.545683,-118.2172135,9z/data=!4m8!4m7!1m0!1m5!1m1!1s0x80c2c70c7b0742ab:0x56164f85adb8c160!2m2!1d-118.2448571!2d34.0511033"}]
+
+</div>
+{% block body %}
+<h2 class="id">{{id}}</h2>
+<p1 class="description">{{description}}</p1>
