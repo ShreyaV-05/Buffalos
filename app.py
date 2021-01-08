@@ -49,9 +49,9 @@ class RegisterForm(FlaskForm):
 def home_route():
     return render_template("home.html", projects=projects.setup())
 
-@app.route('/lowmaint/')
+@app.route('/LA/')
 def hello_route():
-    return render_template("low_maint.html", projects=projects.setup())
+    return render_template("LA.html", projects=projects.setup())
 
 
 @app.route('/highmaint/')
