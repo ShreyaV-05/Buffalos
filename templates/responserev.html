@@ -163,7 +163,7 @@ input[type=submit]:hover {
         <table id="links">
             <tr>
                 <td><a href={{url_for('.databases')}}>Full Table </a></td>
-                <td><a href={{url_for('.restuarants')}}>Restuarants only</a></td>
+                <td><a href={{url_for('.cuisine')}}>Cuisine only</a></td>
                 <td><a href={{url_for('.review')}}>Reviews only</a></td>
                 <td><a href={{url_for('.rate')}}>Rate only</a></td>
             </tr>
@@ -192,16 +192,27 @@ input[type=submit]:hover {
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="restaurant">Restaurant</label>
+                <label for="cuisine">Cuisine</label>
             </div>
             <div class="col-75">
-                <select id="Restaurant" name="restaurant">
+                <select id="cuisine" name="cuisine">
                     <option value="asian">Asian</option>
                     <option value="italian">Italian</option>
                     <option value="mexican">Mexican</option>
                     <option value="other">Other</option>
-                </select>
-                <div>
+                <select>
+            <div>
+                <div class="col-25" id="restaurantdiv">
+                    <label for="restaurant">Restaurant</label>
+                    <select class="cuisine" id="restaurant">
+                        <option>Yay</option>
+                        <option>Woo</option>
+                        <option>Hazah</option>
+                        <option>Yipee</option>
+                        <option>Hoorah</option>
+                    </select>
+                </div>
+
         <div class="row">
              <div class="col-25">
                    <label for="review">Review</label>

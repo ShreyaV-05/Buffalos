@@ -16,11 +16,11 @@ def create():
         db.session.commit()
         """prepare data for related tables extracting from form and using new UserID """
         userid = db.session.query(func.max(Users.UserID))
-        restaurant = restaurant(restaurant=request.form.get("restuarants"), UserID=userid)
+        cuisine = cuisine(cuisine=request.form.get("cuisine"), UserID=userid)
         review = review(review=request.form.get("review"), UserID=userid)
         rate = rate(rate=request.form.get("rate"), UserID=userid)
-        """restaurant table add and commit"""
-        db.session.add(restaurant)
+        """cuisine table add and commit"""
+        db.session.add(cuisine)
         db.session.commit()
         """review table add and commit"""
         db.session.add(review)
