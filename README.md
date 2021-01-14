@@ -3,7 +3,7 @@
 
 Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 # Cuisines
-##January 15 Big Tickets
+## January 15 Big Tickets
 |Big Tickets|Assigned To|Explanation|
 |---|---|---|
 |Ticket 1:    |   |   |
