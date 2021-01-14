@@ -5,35 +5,40 @@ from sqlalchemy import create_engine, inspect
 app = Flask(__name__)
 
 ''' database setup  '''
-dbURI = 'sqlite:///test.db'
+dbURI = 'sqlite:///resp.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 db = SQLAlchemy(app)
 
 ''' table definitions '''
 
-
 class user(db.Model):
     userid = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(255), unique=True, nullable=False)
-    password = db.Column(db.String(255), unique=True, nullable=False)
+    fname = db.Column(db.String(255), unique=True, nullable=False)
+    lname = db.Column(db.String(255), unique=True, nullable=False)
 
 
-class rest(db.Model):
-    email_id = db.Column(db.Integer, primary_key=True)
-    email_address = db.Column(db.String(255), unique=True, nullable=False)
+class cuisine(db.Model):
+    cuisine_id = db.Column(db.Integer, primary_key=True)
+    cuisine = db.Column(db.String(255), unique=True, nullable=False)
     userid = db.Column(db.Integer, db.ForeignKey('user.userid'))
 
 
-class phone_numbers(db.Model):
-    phone_id = db.Column(db.Integer, primary_key=True)
-    phone_number = db.Column(db.String(255), unique=True, nullable=False)
-    userid = db.Column(db.Integer, db.ForeignKey('user.userid'))
+class review (db.Model):
+    review_id = db.Column(db.Integer, primary_key=True)
+    review = db.Column(db.String(255), unique=True, nullable=False)
+    rate = db.Column(db.Integer, unique=True, nullable=False)
+    userid = db.Column(db.Integer, db.ForeignKey('cuisine.cuisine_id'))
+"""
+class rate (db.Model):
+    rate_id = db.Column(db.Integer, primary_key=True)
+    rate = db.Column(db.String(255), unique=True, nullable=False)
+    userid = db.Column(db.Integer, db.ForeignKey('cuisine.cuisine_id'))
+
 
     def __repr__(self):
         return '<User %r>' % self.username
-
-
+"""
 ''' table creation '''
 db.create_all()
 
