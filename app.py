@@ -51,7 +51,7 @@ def home_route():
 
 @app.route('/LA/')
 def hello_route():
-    return render_template("LA.html", projects=projects.setup())
+    return render_template("lasangeles.html", projects=projects.setup())
 
 
 @app.route('/highmaint/')

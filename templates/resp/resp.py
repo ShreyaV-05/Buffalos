@@ -12,7 +12,9 @@ def create():
         """prepare data for primary table extracting from form"""
         user = Users(fname=request.form.get("fname"), lname=request.form.get("lname"))
         """add and commit data to user table"""
-        db.session.add(user)
+        db.session.add(fname)
+        db.session.commit()
+        db.session.add(lname)
         db.session.commit()
         """prepare data for related tables extracting from form and using new UserID """
         userid = db.session.query(func.max(Users.UserID))
