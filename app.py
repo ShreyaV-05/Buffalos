@@ -49,26 +49,17 @@ class RegisterForm(FlaskForm):
 def home_route():
     return render_template("home.html", projects=projects.setup())
 
-@app.route('/LA/')
-def hello_route():
+@app.route("/sandiego/")
+def sandiego_route():
+    return render_template("sandiego.html", projects=projects.setup())
+
+@app.route("/losangeles/")
+def losangeles_route():
     return render_template("losangeles.html", projects=projects.setup())
 
-
-@app.route('/highmaint/')
-def highmaint_route():
-    return render_template("high_maint.html", projects=projects.setup())
-
-@app.route('/sdplants/')
-def sdplant_route():
-    return render_template("SD_plants.html", projects=projects.setup())
-
-@app.route('/fruitveggie/')
-def fruit_route():
-    return render_template("fruit_veggie.html", projects=projects.setup())
-
-@app.route('/plantpics/')
-def plantpictures():
-    return render_template("test.html", projects=projects.setup())
+@app.route("/sanfrancisco/")
+def sanfrancisco_route():
+    return render_template("sanfrancisco.html", projects=projects.setup())
 
 #Create the Login Page
 @app.route('/login/',methods = ['GET','POST'])
