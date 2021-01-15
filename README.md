@@ -3,12 +3,6 @@
 
 Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 # Cuisines
-## January 15 - Big Tickets
-|Big Tickets   |Assigned To   |Explanation   |
-|---|---|---|
-|Ticket 1: Response form    |Shreya   |   |
-|Ticket 2: Recommendation page   |Andrea   |   |
-|Ticket 3: Drop Down Menu, Deployment    |Diane   |   |
 ## Website Summary
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
 There will be different restuarants information avaliable on each page sorted by location all falling under different cuisines. There will be a database storing these restaurants that you can search through by cuisines and favorite your favorite food by logging in. 
@@ -58,3 +52,10 @@ Our current web pages on the running site include:
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
+
+# January 15 - Big Tickets
+|Big Tickets   |Assigned To   |Explanation   |
+|---|---|---|
+|Ticket 1: Response form    |Shreya   |   |
+|Ticket 2: Recommendation page   |Andrea   |   |
+|Ticket 3: Drop Down Menu, Deployment    |Diane   |   |
