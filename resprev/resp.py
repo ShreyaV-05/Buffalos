@@ -1,11 +1,11 @@
 from flask import request, redirect, url_for
 from sqlalchemy import func
-from resprev import resprev_bp
+from app import app
 from resprev.reptable import User, Cuisine, Review
 from resprev.init import db
 
 
-@resprev_bp.route('/create/', methods=["POST"])
+@app.route('/create/', methods=["POST"])
 def create():
     if request.form:
         """prepare data for primary table extracting from form"""

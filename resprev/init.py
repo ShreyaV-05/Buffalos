@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 db = SQLAlchemy(app)
 
-""" blue print to move db to its own folder
+""" blue print to move db to its own folder  ASK FOR HELP NEXT WEEK
 from resprev import resprev_bp
 app.register_blueprint(resprev_bp, url_prefix='/resprevdb')
  """
