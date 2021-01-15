@@ -12,23 +12,23 @@ db = SQLAlchemy(app)
 
 ''' table definitions '''
 
-class user(db.Model):
+class User(db.Model):
     userid = db.Column(db.Integer, primary_key=True)
     fname = db.Column(db.String(255), unique=True, nullable=False)
     lname = db.Column(db.String(255), unique=True, nullable=False)
 
 
-class cuisine(db.Model):
+class Cuisine(db.Model):
     cuisine_id = db.Column(db.Integer, primary_key=True)
     cuisine = db.Column(db.String(255), unique=True, nullable=False)
     userid = db.Column(db.Integer, db.ForeignKey('user.userid'))
 
 
-class review (db.Model):
+class Review (db.Model):
     review_id = db.Column(db.Integer, primary_key=True)
     review = db.Column(db.String(255), unique=True, nullable=False)
     rate = db.Column(db.Integer, unique=True, nullable=False)
-    userid = db.Column(db.Integer, db.ForeignKey('cuisine.cuisine_id'))
+    cuisine_id = db.Column(db.Integer, db.ForeignKey('cuisine.cuisine_id'))
 """
 class rate (db.Model):
     rate_id = db.Column(db.Integer, primary_key=True)
