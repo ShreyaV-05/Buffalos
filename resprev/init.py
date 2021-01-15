@@ -1,3 +1,4 @@
+
 """_init_.py is used to define app and all blueprints"""
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
@@ -9,11 +10,16 @@ dbURI = 'sqlite:///models/resp.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
 db = SQLAlchemy(app)
-"""
-/// blue print to move db to its own folder 
-from restapi import restapi_bp
-from pythondb import pythondb_bp
 
-app.register_blueprint(restapi_bp, url_prefix='/restapi')
-app.register_blueprint(pythondb_bp, url_prefix='/pythondb')
-"""
+""" blue print to move db to its own folder
+from resprev import resprev_bp
+app.register_blueprint(resprev_bp, url_prefix='/resprevdb')
+ """
+"""__init.py__ has responsibility of defining interfaces for blueprint"""
+from flask import Blueprint
+resprev_bp = Blueprint(
+    'resprev_bp',
+    __name__,
+    template_folder='templates',
+    static_folder='static'
+)
