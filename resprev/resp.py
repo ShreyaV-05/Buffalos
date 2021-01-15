@@ -1,8 +1,7 @@
-from flask import render_template, request, redirect, url_for
-from flask_table import Table, Col
+from flask import request, redirect, url_for
 from sqlalchemy import func
-from reptable import User, Cuisine, Review
-from init import db
+from resprev.reptable import User, Cuisine, Review
+from resprev.init import db
 
 
 @pythondb_bp.route('/create/', methods=["POST"])
