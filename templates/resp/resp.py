@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
 from pythondb import pythondb_bp
-from pythondb.model import Users, Emails, PhoneNumbers
+from pythondb.model import Users, Cuisine, Review, Rate
 from __init__ import db
 from models.lessons import menus
 
@@ -16,9 +16,9 @@ def create():
         db.session.commit()
         """prepare data for related tables extracting from form and using new UserID """
         userid = db.session.query(func.max(Users.UserID))
-        cuisine = cuisine(cuisine=request.form.get("cuisine"), UserID=userid)
-        review = review(review=request.form.get("review"), UserID=userid)
-        rate = rate(rate=request.form.get("rate"), UserID=userid)
+        cuisine = Cuisine(cuisine=request.form.get("cuisine"), UserID=userid)
+        review = Review(review=request.form.get("review"), UserID=userid)
+        rate = Rate(rate=request.form.get("rate"), UserID=userid)
         """cuisine table add and commit"""
         db.session.add(cuisine)
         db.session.commit()
