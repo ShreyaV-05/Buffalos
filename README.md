@@ -7,7 +7,7 @@ Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 |Big Tickets   |Assigned To   |Explanation   |
 |---|---|---|
 |Ticket 1: Response form    |Shreya   |   |
-|Ticket 2: Simplify templates code   |Andrea   |   |
+|Ticket 2: Recommendation page   |Andrea   |   |
 |Ticket 3: Drop Down Menu, Deployment    |Diane   |   |
 ## Website Summary
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
