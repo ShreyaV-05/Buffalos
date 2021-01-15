@@ -56,6 +56,6 @@ Our current web pages on the running site include:
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Explanation   |
 |---|---|---|
-|Ticket 1: Response form    |Shreya   |   |
+|Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/templates/resp This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section.|
 |Ticket 2: Recommendation page   |Andrea   |   |
 |Ticket 3: Drop Down Menu, Deployment    |Diane   |   |
