@@ -57,5 +57,6 @@ Our current web pages on the running site include:
 |Big Tickets   |Assigned To   |Description   |Grade   |
 |---|---|---|---|
 |Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).| /20  |
-|Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html and link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182).  | /20  |
+|Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html
+Link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182).  | /20  |
 |Ticket 3: Drop Down Menu, Deployment    |Diane   |   | /20  |
