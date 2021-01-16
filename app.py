@@ -5,8 +5,12 @@ from wtforms import Form, BooleanField, StringField, PasswordField
 from wtforms.validators import InputRequired,Email,Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import projects
 
-
+import requests
+from flask import render_template, request, redirect, url_for
+from flask_table import Table, Col
+from sqlalchemy import func
 
 
 app = Flask(__name__)
@@ -99,6 +103,83 @@ def signup():
 @app.route('/dashboard/')
 def showboard():
     return render_template("DashBoard.html", projects=projects.setup())
+
+
+#Create Joke Page to Transform into something later
+@app.route('/joke/',methods=['GET','POST'])
+def joke():
+    #call to random joke web api
+    url ='https://official-joke-api.appspot.com/jokes/programming/random'
+    resp = requests.get(url)
+
+    #formatting variables from return
+    setup = resp.json()[0]['setup']
+    punchline = resp.json()[0]['punchline']
+    print(setup)
+    return render_template('joke.html', setup=setup, punchline=punchline)
+
+
+# For Recommend Page
+# Declare user ID, type of cuisine, and name of restaurant table
+class UserTable(Table):
+    UserID = Col('UserID')
+    cuisine = Col('Cuisine')
+    restaurant = Col('Restaurant')
+
+
+# Declare location table
+class LocationTable(Table):
+    UserID = Col('UserID')
+    location = Col('location')
+
+
+# Declare prices table
+class PriceTable(Table):
+    UserID = Col('UserID')
+    price = Col('price')
+
+
+# connects default URL to a function
+@app.route('/recommend/')
+def databases():
+    """convert Users table into a list of dictionary rows"""
+    records = []
+    users = user.query.all()
+    for user in users:
+        user_dict = {'id': user.UserID, 'name': user.cusine, 'password': user.restaurant}
+        # filter location
+        location = location.query.filter_by(UserID=user.UserID).first()
+        if location:
+            user_dict['emails'] = location.email_address
+        # filter price
+        price = price.query.filter_by(UserID=user.UserID).first()
+        if price:
+            user_dict['price'] = price.phone_number
+        # append to records
+        records.append(user_dict)
+    return render_template("recommend.html", table=records, menus=menus)
+
+
+# create/add a new record to the table
+@app.route('/create/', methods=["POST"])
+def create():
+    if request.form:
+        """prepare data for primary table extracting from form"""
+        user = UserTable(username=request.form.get("username"), password=request.form.get("password"))
+        """add and commit data to user table"""
+        db.session.add(user)
+        db.session.commit()
+        """prepare data for related tables extracting from form and using new UserID """
+        userid = db.session.query(func.max(UserTable.UserID))
+        location = LocationTable(location=request.form.get("location"), UserID=userid)
+        price = PriceTable(price=request.form.get("price"), UserID=userid)
+        """email table add and commit"""
+        db.session.add(location)
+        db.session.commit()
+        """phone number table add and commit"""
+        db.session.add(price)
+        db.session.commit()
+    return redirect(url_for('pythondb_bp.databases'))
 
 
 
