@@ -54,8 +54,8 @@ Our current web pages on the running site include:
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
 
 # January 15 - Big Tickets
-|Big Tickets   |Assigned To   |Explanation   |
-|---|---|---|
-|Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).|
-|Ticket 2: Recommendation page   |Andrea   |   |
-|Ticket 3: Drop Down Menu, Deployment    |Diane   |   |
+|Big Tickets   |Assigned To   |Explanation   |Grade   |
+|---|---|---|---|
+|Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).| /20  |
+|Ticket 2: Recommendation page   |Andrea   |   | /20  |
+|Ticket 3: Drop Down Menu, Deployment    |Diane   |   | /20  |
