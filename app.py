@@ -103,7 +103,7 @@ def signup():
 @app.route('/dashboard/')
 def showboard():
     return render_template("DashBoard.html", projects=projects.setup())
-
+"""
 
 #Create Joke Page to Transform into something later
 @app.route('/joke/',methods=['GET','POST'])
@@ -185,4 +185,3 @@ def create():
 
 if __name__ == "__main__":
     app.run(debug = True, port=8080)
-"""

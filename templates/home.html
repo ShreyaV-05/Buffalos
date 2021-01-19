@@ -1,25 +1,9 @@
 <!DOCTYPE html>
-{% extends "base.html" %}
-
-{% block head %}
-<title>{{name}}| Home </title>
-{% endblock %}
-
-{% block script %}
-<script src="https://threejs.org/build/three.js"></script>
-<script src="{{ url_for('static', filename='vanta.clouds.min.js') }}"></script>
-<script>
-
-    VANTA.CLOUDS({
-        el: "body",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        wingSpan: 40.0
-    })
-</script>
-{% endblock %}
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome to our Cuisine Website!</h1>
+</body>
+</html>
