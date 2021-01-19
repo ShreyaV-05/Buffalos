@@ -82,7 +82,7 @@ def login():
         return '<h1>Invalid username or password</h1>'
 
     return render_template("login.html", form = form, projects=projects.setup())
-
+"""
 #Create the SignUp Page
 @app.route('/signup/',methods = ['GET','POST'])
 def signup():
@@ -104,3 +104,4 @@ def showboard():
 
 if __name__ == "__main__":
     app.run(debug = True, port=8080)
+"""
