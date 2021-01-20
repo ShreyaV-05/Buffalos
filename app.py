@@ -65,6 +65,10 @@ def losangeles_route():
 def sanfrancisco_route():
     return render_template("sanfrancisco.html", projects=projects.setup())
 
+@app.route("/responserev/")
+def responserev_route():
+    return render_template("responserev.html", projects=projects.setup())
+
 #Create the Login Page
 @app.route('/login/',methods = ['GET','POST'])
 def login():
