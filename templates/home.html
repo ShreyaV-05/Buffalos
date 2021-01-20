@@ -71,6 +71,53 @@
                 </ul>
             </div>
         </nav>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../static/bootstrap.bundle.min.js"></script>
+        <div class="container-fluid" style="position: relative; z-index: 1;">
+        </div>
+
+        <div class="product" style = "margin-top: 2%; position: absolute; z-index: 2;">
+            <div class="row" style="padding: 10%; padding-top: 0%; padding-bottom: 5%;">
+
+                <div class="col-8" >
+                    {% block title %}
+                    {% endblock %}
+                </div>
+
+            </div>
+
+            <div class="row" style="padding-left: 10%;">
+                <div class="col-4">
+                    {% block link1 %}
+                    {% endblock %}
+                </div>
+
+                <div class="col-4">
+                    {% block link2 %}
+                    {% endblock %}
+                </div>
+
+                <div class="col-4">
+                    {% block link3 %}
+                    {% endblock %}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+{% block content %}
+
+{% endblock %}
+{% block script %}
+<script src="https://threejs.org/build/three.js"></script>
+<!--
+<script src="{{ url_for('static', filename='vanta.dots.min.js') }}"></script>!-->
+<script src="../static/bootstrap.bundle.min.js"></script>
+
+{% endblock %}
     </div>
 
 <h1 style="background-color: white;">WELCOME! EXPLORE SEVERAL CUSINES IN SOME OF CALIFORNIA'S MAJOR CITIES!</h1>
