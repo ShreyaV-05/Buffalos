@@ -13,13 +13,13 @@ class UserTable(Table):
 
 # Declare your  cuisinetable
 class CuisineTable(Table):
-    user.userid = Col('cuisine')
+    User.userid = Col('cuisine')
     cuisine = Col('cuisine')
 
 
 # Declare your review table
 class ReviewTable(Table):
-    cuisine.cuisine_id = Col('cuisine')
+    Cuisine.cuisine_id = Col('cuisine')
     review = Col('review')
     rate = Col('rate')
 
