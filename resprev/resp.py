@@ -45,7 +45,7 @@ def databases():
             user_dict['rate'] = rate.review
         # append to records
         records.append(user_dict)
-    return render_template("resprev.init/responserev.html", table=records, menus=menus)
+    return render_template("resprev/responserev.html", table=records, menus=menus)
 
 @app.route('/create/', methods=["POST"])
 def create():
