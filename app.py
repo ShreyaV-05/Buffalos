@@ -7,6 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
 
+
 from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
@@ -48,8 +49,6 @@ class RegisterForm(FlaskForm):
     password = PasswordField('password',validators=[InputRequired(), Length(min=8,max=80)])
 
 
-
-
 @app.route('/')
 def home_route():
     return render_template("home.html", projects=projects.setup())
@@ -66,9 +65,9 @@ def losangeles_route():
 def sanfrancisco_route():
     return render_template("sanfrancisco.html", projects=projects.setup())
 
-
-
-
+@app.route("/responserev/")
+def responserev_route():
+    return render_template("responserev.html", projects=projects.setup())
 
 #Create the Login Page
 @app.route('/login/',methods = ['GET','POST'])
@@ -78,11 +77,11 @@ def login():
     #TODO Make The SQL Database work
 
     if form.validate_on_submit():
-        # exists = db.session.query(
-        # db.session.query(User).filter_by(username='AndrewZhang').exists()
-        # ).scalar()
-        # if exists == True:
-        # return "Exists"
+        #exists = db.session.query(
+        #db.session.query(User).filter_by(username='AndrewZhang').exists()
+        #).scalar()
+        #if exists == True:
+        #return "Exists"
         user = User.query.filter_by(username = form.username.data).first()
         if user:
             if user.password == form.password.data:
@@ -110,14 +109,14 @@ def showboard():
     return render_template("DashBoard.html", projects=projects.setup())
 """
 
-# Create Joke Page to Transform into something later
+#Create Joke Page to Transform into something later
 @app.route('/joke/',methods=['GET','POST'])
 def joke():
-    # call to random joke web api
+    #call to random joke web api
     url ='https://official-joke-api.appspot.com/jokes/programming/random'
     resp = requests.get(url)
 
-    # formatting variables from return
+    #formatting variables from return
     setup = resp.json()[0]['setup']
     punchline = resp.json()[0]['punchline']
     print(setup)
@@ -185,7 +184,6 @@ def create():
         db.session.add(price)
         db.session.commit()
     return redirect(url_for('pythondb_bp.databases'))
-
 
 
 
