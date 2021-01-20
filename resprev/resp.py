@@ -65,4 +65,31 @@ def create():
         """review table add and commit"""
         db.session.add(review)
         db.session.commit()
-    return redirect(url_for('pythondb_bp.databases'))
+    return redirect(url_for('resprev.init.databases'))
+
+# if email url, show the email table only
+@app.route('/cuisine/')
+def cuisine():
+    # fill the table with emails only
+    records = []
+    cuisine = cuisine.query.all()
+    for cuisine in cuisine:
+        user_dict = {}
+        user_dict['id'] = cuisine.UserID
+        user_dict['cuisine'] = cuisine.cuisine
+        records.append(user_dict)
+    return render_template("app/responserev.html", table=records, menu=menus)
+
+
+# if phones url, show phones table only
+@app.route('/phones/')
+def review():
+    # fill the table with phone numbers only
+    records = []
+    review = review.query.all()
+    for review in review:
+        cuisine_dict = {}
+        cuisine_dict['id'] = review.cuisine_id
+        cuisine_dict['review'] = review.review
+        records.append(cuisine_dict)
+    return render_template("app/responserev.html", table=records, menu=menus)
