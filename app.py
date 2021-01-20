@@ -7,7 +7,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
 
-import requests
 from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
