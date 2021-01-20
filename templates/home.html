@@ -2,8 +2,77 @@
 <html>
 <head>
     <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      h1   {
+      color: white;
+      font-family: Impact;
+      font-size: 800%
+      border: 2px solid lightpink;
+      padding: 20px;
+      margin: 50px;
+      text-align: center;
+      background-image: url('//artofcatering.com.au/wp-content/uploads/2017/11/asian-cuisines.jpg');
+      background-size: 50% 300px;
+      opacity: 0.5;
+      }
+
+
+      p   {
+      color: black;
+      font-size: 300%;
+      font-family: Impact;
+      }
+
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      }
+
+    </style>
 </head>
-<body>
-<h1>Welcome to our Cuisine Website!</h1>
+<body style="background-color:#212F3C;">
+
+<!-- Navigation Bar from bootstrap -->
+<div>
+    <div style="background-color:powderblue;color:white;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">{{name}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+                <ul class="navbar-nav">
+                    <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href= "/login/">Login</a>
+                    <a class="nav-link" href= "/signup/">Signup</a>
+                    <a class="nav-link" href= "/LA/">Restaurants</a>
+                    <a class="nav-link" href= "/dashboard/">Dashboard</a>
+                    <a class="nav-link" href= "/recommend/">Recommend</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Restaurants
+                        </a>
+                        <div class="dropdown-menu" style="position: absolute; z-index: 2;">
+                            <a class="nav-link" href="/sandiego/">San Diego</a>
+                            <a class="nav-link" href="/losangeles/">Los Angeles</a>
+                            <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+<h1 style="background-color: white;">WELCOME! EXPLORE SEVERAL CUSINES IN SOME OF CALIFORNIA'S MAJOR CITIES!</h1>
+
+
 </body>
 </html>
