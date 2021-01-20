@@ -144,7 +144,7 @@ class PriceTable(Table):
 def databases():
     """convert Users table into a list of dictionary rows"""
     records = []
-    users = user.query.all()
+    users = users.query.all()
     for user in users:
         user_dict = {'id': user.UserID, 'name': user.cusine, 'password': user.restaurant}
         # filter location

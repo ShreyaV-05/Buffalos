@@ -4,44 +4,37 @@ from app import app
 from resprev.reptable import User, Cuisine, Review
 from resprev.init import db
 
-# Declare your Users table
-class UserTable(Table):
-    UserID = Col('UserID')
-    username = Col('username')
-    password = Col('Password')
+# Declare your  cuisinetable
+class CuisineTable(Table):
+    cuisine.cuisine_id = Col('cuisine')
+    cuisine = Col('cuisine')
 
 
-# Declare your  emailtable
-class EmailTable(Table):
-    UserID = Col('UserID')
-    email_address = Col('email_address')
-
-
-# Declare your  phone numbers table
-class PNTable(Table):
-    UserID = Col('UserID')
-    phone_number = Col('phone_number')
+# Declare your review table
+class ReviewTable(Table):
+    cuisine.cuisine_id = Col('cuisine')
+    review = Col('review')
+    rate = Col('rate')
 
 
 # connects default URL to a function
-@pythondb_bp.route('/')
+@app.route('/')
 def databases():
     """convert Users table into a list of dictionary rows"""
     records = []
-    users = Users.query.all()
-    for user in users:
-        user_dict = {'id': user.UserID, 'name': user.username, 'password': user.password}
-        # filter email
-        email = Emails.query.filter_by(UserID=user.UserID).first()
-        if email:
-            user_dict['emails'] = email.email_address
-        # filter phone number
-        pn = PhoneNumbers.query.filter_by(UserID=user.UserID).first()
-        if pn:
-            user_dict['phone_numbers'] = pn.phone_number
+    cuisine = cuisine.query.all()
+    for cuisine in cuisine:
+        cuisine_dict = {'id':cuisine.cuisine_id}
+        # filter review
+        review = review.query.filter_by(cuisine_id=cuisine.cuisine_id).first()
+        if review:
+            cuisine_dict['review'] = review.review
+        rate = rate.query.filter_by(cuisine_id=cuisine.cuisine_id).first()
+        if rate:
+            cuisine_dict['rate'] = rate.review
         # append to records
-        records.append(user_dict)
-    return render_template("pythondb/index.html", table=records, menus=menus)
+        records.append(cuisine_dict)
+    return render_template("resprev/responserev.html", table=records, menus=menus)
 
 @app.route('/create/', methods=["POST"])
 def create():
