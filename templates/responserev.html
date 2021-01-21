@@ -214,7 +214,7 @@ input[type=submit]:hover {
 <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
 
 <div class="container">
-    <form method="POST" ID="myForm" action={{url_for('.create')}} >
+    <form method="POST" ID="myForm" action={{url_for('.create')}}>
         <div class="row">
             <div class="col-25">
                 <label for="fname">First Name</label>
@@ -242,7 +242,8 @@ input[type=submit]:hover {
                     <option value="mexican">Mexican</option>
                     <option value="other">Other</option>
                 <select>
-            <div>
+            </div>
+         </div>
         <div class="row">
              <div class="col-25">
                    <label for="review">Review</label>
@@ -264,10 +265,10 @@ input[type=submit]:hover {
                      <option value=5>5 star</option>
                    </select>
              </div>
+         </div>
         <div class="row">
               <input type="submit" value="Submit">
         </div>
-    </form>
 </div>
 
 </body>
