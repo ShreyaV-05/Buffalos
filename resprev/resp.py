@@ -1,4 +1,4 @@
-from flask import request, redirect, url_for
+from flask import request, redirect, url_for, render_template
 from flask_table import Table, Col
 from sqlalchemy import func
 from app import app
@@ -45,7 +45,7 @@ def databases():
             user_dict['rate'] = rate.review
         # append to records
         records.append(user_dict)
-    return render_template("resprev/responserev.html", table=records, menus=menus)
+    return render_template("responserev.html", table=records)
 
 @app.route('/create/', methods=["POST"])
 def create():
@@ -66,10 +66,10 @@ def create():
         db.session.add(review)
         db.session.commit()
     return redirect(url_for('resprev.init.databases'))
-
+"""
 # if email url, show the email table only
 @app.route('/cuisine/')
-def cuisine():
+def cuisine(cuisine):
     # fill the table with emails only
     records = []
     cuisine = cuisine.query.all()
@@ -93,3 +93,4 @@ def review():
         cuisine_dict['review'] = review.review
         records.append(cuisine_dict)
     return render_template("app/responserev.html", table=records, menu=menus)
+"""

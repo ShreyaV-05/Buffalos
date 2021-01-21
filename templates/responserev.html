@@ -91,7 +91,7 @@
 -->
 <!DOCTYPE html>
 <html>
-{% extends "homesite/base.html" %}
+{% extends "base.html" %}
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -179,6 +179,7 @@ input[type=submit]:hover {
         }
     </style>
 <body>
+<!--
 <div class="row courses-buttons justify-content-center">
         <table id="links">
             <tr>
@@ -188,6 +189,7 @@ input[type=submit]:hover {
             </tr>
         </table>
     </div>
+ -->
 **Table block is dependent on table variable and dictionary setup **
 <table>
     <tr>
@@ -212,7 +214,7 @@ input[type=submit]:hover {
 <p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
 
 <div class="container">
-    <form method="POST" ID="myForm" action={{url_for('.create')}} >
+    <form method="POST" ID="myForm" action={{url_for('.create')}}>
         <div class="row">
             <div class="col-25">
                 <label for="fname">First Name</label>
@@ -240,20 +242,8 @@ input[type=submit]:hover {
                     <option value="mexican">Mexican</option>
                     <option value="other">Other</option>
                 <select>
-            <div>
-                <!--
-        <div>
-                <div class="col-25" id="restaurantdiv">
-                    <label for="restaurant">Restaurant</label>
-                    <select class="cuisine" id="restaurant">
-                        <option>Yay</option>
-                        <option>Woo</option>
-                        <option>Hazah</option>
-                        <option>Yipee</option>
-                        <option>Hoorah</option>
-                    </select>
-                </div>
--->
+            </div>
+         </div>
         <div class="row">
              <div class="col-25">
                    <label for="review">Review</label>
@@ -261,7 +251,7 @@ input[type=submit]:hover {
               <div class="col-75">
                      <textarea id="review" name="review" placeholder="Write something.." style="height:200px"></textarea>
               </div>
-              </div>
+        </div>
          <div class="row">
              <div class="col-25">
                   <label for="rate">Rating</label>
@@ -275,10 +265,10 @@ input[type=submit]:hover {
                      <option value=5>5 star</option>
                    </select>
              </div>
+         </div>
         <div class="row">
               <input type="submit" value="Submit">
         </div>
-    </form>
 </div>
 
 </body>
