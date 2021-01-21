@@ -1,14 +1,16 @@
-{% extends "base.html" %}
-{% block head %}
+<!DOCTYPE html>
+{% extends "restaurantbase.html" %}
 
+
+{% block head %}
 <body style="background-color:powderblue;"><body>
-<title>{{Restaurants}} | Las Angeles </title>
+<title>{{Restaurants}} | Los Angeles </title>
 {% endblock %}
 
 <!-- Project  Information  -->
 {% block title %}
 <div id="big">
-    <h1 style="color:darkorange;text-align:center">Las Angeles</h1>
+    <h1 style="color:darkorange;text-align:center">Los Angeles</h1>
     <pre style="color:orangered; font-size:20px;text-align:center">Home of Hollywood and Santa Monica Pier</pre>
     <pre style="color:orange;font-size:20px;text-align:center">By Shreya Vasant</pre>
 </div>
@@ -16,7 +18,7 @@
 
 {% block hotspot1 %}
 <div class="Asain Cuisines">
-    <h2 style="color:orangered;font-size:20px;text-align:center">Asain Cuisines</h2>
+    <h2 style="color:orangered;font-size:20px;text-align:center">Asian Cuisines</h2>
     <hr>
     <h3 style="color:mediumseagreen;font-size:20px;">Badmaash- An Indian Cuisine</h3>
     <a href="https://www.badmaashla.com/welcome/#menu-section">
@@ -114,18 +116,4 @@
 {% endblock %}
 
 
-<!--
 
-{% block content %}
-<h1 style="color:##; text-align:center "> Los Angles Restaurants </h1>
-parent_dict = [{'A':'val1','B':'val2', 'content': [["1.1", "2.2"]]},{'A':'val3','B':'val4', 'content': [["3.3", "4.4"]]}]
-{% for dict_item in parent_dict %}
-This example has {{dict_item['A']}} and {{dict_item['B']}}:
-with the content --
-{% for item in dict_item['content'] %}{{item[0]}} and {{item[1]}}{% endfor %}.
-{% endfor %}
-
-</div>
-{% block body %}
-<h2 class="id">{{id}}</h2>
-<p1 class="description">{{description}}</p1>
