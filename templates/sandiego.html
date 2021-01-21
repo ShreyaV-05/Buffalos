@@ -1,10 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "restaurantbase.html" %}
 
-</body>
-</html>
+{% block head %}
+<title>{{name}} | San Diego </title>
+<head>
+    <style>
+ #myBG {
+    background-image: url('//media.radissonhotels.net/image/destination-pages/localattraction/16256-118729-f63226637_3xl.jpg?impolicy=HomeHero');
+    background-size: 100% 300px;
+    background-position: center;
+ }
+
+ #Hotel {
+     background-image: url('https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2018/02/THE-FAIRMONT-HOTEL-VIER-JAHRESZEITEN-HAMBURG.jpg?fit=970%2C545&ssl=1');
+     text-align:center;
+     width: 385px;
+     height: 216.3147px;
+     background-size: 385px 216.3147px;
+     color: white;
+     text-shadow: 2px 2px black;
+ }
+ #Restaurant {
+     background-image: url('https://www.elitetraveler.com/wp-content/uploads/2012/12/facil1.jpg');
+     text-align:center;
+     width: 385px;
+     height: 288.5px;
+     background-size: 385px 288.5px;
+     color: white;
+     text-shadow: 2px 2px black;
+ }
+ .box {
+     background-image: url('https://wlcoller.co.uk/wp-content/uploads/2015/02/Green-Parchment-200gsm-Card.jpg');
+     color: black;
+     border: 5px solid blue;
+     padding: 10px;
+ }
+</style>
+</head>
+{% endblock %}
+
+<!-- Project  Information  -->
+{% block title %}
+<div id="myBG">
+    <h1>San Diego</h1>
+    <pre style="color:white; font-size:18px;">blah blah blah</pre>
+    <pre style="color:white;">By Andrea
+    </pre>
+</div>
+{% endblock %}
+
+{% block hotspot1 %}
+<div class="box">
+    <h2>Asian Cuisine</h2>
+    <hr>
+    <h3>Harney Sushi</h3>
+    <img src="https://www.sandiego.com/sites/sandiego.com/files/content/listing/thumbnail/harney_sushi_oceanside.jpg" alt="Haney Sushi" style="width:300px;height:200px;">
+    <pre style="color:DarkSlateGrey; font-size: 12pt">
+Having a sushi bar and restaurant
+experience, Harney Sushi is one of
+San Diego's top Asian cuisines. It
+is SD's only sake bar—a Japanese
+alcoholic drink made from fermented
+rice that is traditionally drunk
+warm in small porcelain cups—and
+features 40 award winning wines, 30
+amazing sakes, and several gourmet
+specialty rolls. This place also has
+options that are vegetarian friendly,
+vegan, and gluten free for those who
+want. The cuisine provides outdoor
+as well as indoor seating.
+
+    </pre>
+    <hr>
+</div>
+{% endblock %}
+
+{% block hotspot2 %}
+<div class="box">
+    <h2>Italian Cuisine</h2>
+    <hr>
+    <h3>Civico 1845</h3>
+    <img src="https://www.upscalelivingmag.com/wp-content/uploads/2017/02/Civico-1845-Restaurant1-.jpg" alt="Civico 1845" style="width:300px;height:200px;">
+    <pre style="color:DarkSlateGrey;">
+Civico 1845 brings Italy to San Diego.
+Owners Dalio and Pietro Gallo present
+a full menu filled with fresh, light,
+authentic, Italian dishes. They have
+it all, from pastas, to mains, to
+antipasti, and best of all, their
+seafood, which shines above all. For
+those who prefer vegan or gluten free
+options, Civico 1845 provides an
+extensive selection. This restaurant
+serves alcohol for those who are
+old enough. There is also outdoor
+and indoor seating available.
+
+
+
+
+    </pre>
+    <hr>
+</div>
+{% endblock %}
+
+{% block hotspot3 %}
+<div class="box">
+    <h2>Mexican Cuisine</h2>
+    <hr>
+    <h3>Puesto</h3>
+    <img src="https://images.getbento.com/accounts/b3eb43356d326c9cbb1f0ef418f77ccb/media/VaaTIF6KS1O1dQbAfFSR_Web_10.jpg?fit=max&w=1800&auto=format,compress" alt="Puesto" style="width:300px;height:200px;">
+    <pre style="color:DarkSlateGrey;">
+Puesto is an award-winning Mexican
+Artisan Kitchen & Bar is a restaurant
+with an innovative approach and filled
+with plenty of authentic Mexican
+dishes. Puesto is popular for its
+crispy melted cheese tacos with
+locally sourced ingredients and
+handmade non-GMO organic tortillas.
+Taco Tuesdays offer discounted prices
+that people can take advantage of to
+explore a wider variety of their
+amazing taco fillings. They have
+snacks such as mezcal-pickled
+watermelon as well as bigger dishes
+of seafood and enchiladas. The
+restaurant offers indoor and outdoor
+seating, as well as a takout option
+    </pre>
+    <hr>
+</div>
+{% endblock %}

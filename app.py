@@ -1,4 +1,4 @@
-from flask import Flask, render_template,redirect,url_for
+from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import Form, BooleanField, StringField, PasswordField
@@ -7,7 +7,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
 
-
+import requests
 from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
@@ -109,20 +109,21 @@ def showboard():
     return render_template("DashBoard.html", projects=projects.setup())
 """
 
-#Create Joke Page to Transform into something later
-@app.route('/joke/',methods=['GET','POST'])
-def joke():
-    #call to random joke web api
-    url ='https://official-joke-api.appspot.com/jokes/programming/random'
+
+# For Random Cuisine Generator
+@app.route('/random/',methods=['GET','POST'])
+def random():
+    #call to random number web api
+    url ='https://csrng.net/csrng/csrng.php?min=0&max=5'
     resp = requests.get(url)
 
     #formatting variables from return
-    setup = resp.json()[0]['setup']
-    punchline = resp.json()[0]['punchline']
-    print(setup)
+    random = resp.json()[0]['random']
+    print(random)
+    return render_template('random.html', random=random)
     return render_template('joke.html', setup=setup, punchline=punchline)
 
-
+"""
 # For Recommend Page
 # Declare user ID, type of cuisine, and name of restaurant table
 class UserTable(Table):
@@ -146,7 +147,7 @@ class PriceTable(Table):
 # connects default URL to a function
 @app.route('/recommend/')
 def databases():
-    """convert Users table into a list of dictionary rows"""
+    # convert Users table into a list of dictionary rows
     records = []
     users = users.query.all()
     for user in users:
@@ -168,23 +169,24 @@ def databases():
 @app.route('/create/', methods=["POST"])
 def create():
     if request.form:
-        """prepare data for primary table extracting from form"""
+        # prepare data for primary table extracting from form
         user = UserTable(username=request.form.get("username"), password=request.form.get("password"))
-        """add and commit data to user table"""
+        # add and commit data to user table
         db.session.add(user)
         db.session.commit()
-        """prepare data for related tables extracting from form and using new UserID """
+        # prepare data for related tables extracting from form and using new UserID
         userid = db.session.query(func.max(UserTable.UserID))
         location = LocationTable(location=request.form.get("location"), UserID=userid)
         price = PriceTable(price=request.form.get("price"), UserID=userid)
-        """email table add and commit"""
+        # email table add and commit
         db.session.add(location)
         db.session.commit()
-        """phone number table add and commit"""
+        # phone number table add and commit
         db.session.add(price)
         db.session.commit()
     return redirect(url_for('pythondb_bp.databases'))
 
+"""
 
 
 if __name__ == "__main__":

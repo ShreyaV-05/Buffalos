@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Cuisine Generator</title>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        }
+
+        th, td {
+        padding: 15px;
+        }
+
+        #t01 {
+        background-color: #CCCCFF;
+        }
+
+        .center {
+        margin: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .numcenter {
+        padding: 40px;
+        font-size: 40px
+        }
+
+        .btncenter {
+        padding:20px;
+        }
+
+        h1 {
+        padding: 20px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body style="background-image: linear-gradient(to bottom, #92B56A, #DBF1C3);">
+
+<!-- Navigation Bar from Bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">{{name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+        <ul class="navbar-nav">
+            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href= "/login/">Login</a>
+            <a class="nav-link" href= "/signup/">Signup</a>
+            <a class="nav-link" href= "/LA/">Restaurants</a>
+            <a class="nav-link" href= "/dashboard/">Dashboard</a>
+            <a class="nav-link" href="/sandiego/">San Diego</a>
+            <a class="nav-link" href="/losangeles/">Los Angeles</a>
+            <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
+            <a class="nav-link" href="/responserev/">Response Form</a>
+            <a class="nav-link" href="/recommend/">Recommend</a>
+            <a class="nav-link" href="/random/">Pick For Me!</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Restaurants
+                </a>
+                <div class="dropdown-menu" style="position: absolute; z-index: 2;">
+                    <a class="nav-link" href="/sandiego/">San Diego</a>
+                    <a class="nav-link" href="/losangeles/">Los Angeles</a>
+                    <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<h2>Pick for me!</h2>
+<caption id="move"
+<caption>Random Cuisine Generator</caption>
+
+
+<!-- Random Number Generator -->
+<p class="numcenter">{{random}}</p>
+<form class="btncenter" method="POST" ID="myForm" action={{url_for('.random')}} >
+    <input type="submit" value="New Cuisine">
+</form>
+
+
+<!-- Table that coordinates to generated number -->
+<table class="center" style="width:75%">
+    <caption>...now find the cuisine that matches your number and desired location!</caption>
+    <tr id="t01">
+        <th>Number</th>
+        <th>San Diego Cuisine</th>
+        <th>Los Angeles Cuisine</th>
+        <th>San Francisco Cuisine</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Harney Sushi</td>
+        <td>Baadmash</td>
+        <td>Ryoko's Japanese Restaurant & Bar</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Civico 1845</td>
+        <td>Eataly</td>
+        <td>Scoma's Restaurant</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Puesto</td>
+        <td>Tlayuda</td>
+        <td>El Farolito</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Pending</td>
+        <td>Sugar Fish</td>
+        <td>Miki Restaurant</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Pending</td>
+        <td>Yang Chow</td>
+        <td>Pending</td>
+    </tr>
+</table>
+
+</body>
+</html>
