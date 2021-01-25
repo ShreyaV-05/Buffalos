@@ -62,9 +62,9 @@ Our current web pages on the running site include:
 
 # January 28 - Big Tickets #
 ## Ticket 1: Create Web API - Andrea ##
-*description
-*link to code
-*link to scrumboard
+-[]description
+-[]link to code
+-[]link to scrumboard
 
 ## Ticket 2 - Shreya ##
 *description
