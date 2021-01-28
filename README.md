@@ -71,8 +71,8 @@ Our current web pages on the running site include:
 * link to code
 * Scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899 https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747
 
-## Ticket 3 - Diane ##
-* description
+## Ticket 3: Create Easter Egg with page - Diane ##
+* Create a page holding exam resources such as journals, articles/sites, TPTs, slideshows. I want to try to create a secret "passageway" to the page. An idea I have right now is the search bar where if you search up "buffalos" it will direct you to the page. We are also planning on changing the searchbar to a logo/picture tab thing.
 * link to code
-* link to scrumboard
+* scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-53778656
 
