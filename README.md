@@ -66,8 +66,8 @@ Our current web pages on the running site include:
 * link to code
 * link to scrumboard
 
-## Ticket 2 - Shreya ##
-* description
+## Ticket 2: Create Review Page - Shreya ##
+* Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars).
 * link to code
 * link to scrumboard
 
