@@ -61,8 +61,8 @@ Our current web pages on the running site include:
 |Ticket 3: Drop Down Menu, Deployment (given extension due to technical errors)   |Diane   |Fixed drop-down menu (menu originally did not register when I hovered over it): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/tree/main/static. Also worked on deployment but per our discussion on Friday, I am restarting with Raspberry Pi and am still working on it over the weekend. On scrumboard, dropdown is complete: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52420810.   | 18/20  |
 
 # January 28 - Big Tickets #
-## Ticket 1: Create Web API - Andrea ##
-* description
+## Ticket 1: Create "Coming Soon" Page - Andrea ##
+* "Coming Soon" Page will consist of a table of cuisines that will be "coming soon" to the website. Will use meta data to be able to sort the cuisines by location (San Diego, Los Angeles, San Francisco) and possibly by the general price as well ($,$$,$$$)
 * link to code
 * link to scrumboard
 
