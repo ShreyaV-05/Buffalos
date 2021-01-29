@@ -66,10 +66,10 @@ Our current web pages on the running site include:
 * link to code
 * scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804462
 
-## Ticket 2: Create Review Page/ Login Page - Shreya ##
-* Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars). If time work on login page frontend and start backend (or if the review page is too hard to generate within a week).
+## Ticket 2: Create Review Page/ Login Page/ Sessions Ticket - Shreya ##
+* Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars). If time work on login page frontend and start backend (or if the review page is too hard to generate within a week), which will include the code for sessions.
 * link to code
-* Scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899 https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747
+* Scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899 https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804584
 
 ## Ticket 3: Create Easter Egg with page - Diane ##
 * Create a page holding exam resources such as journals, articles/sites, TPTs, slideshows. I want to try to create a secret "passageway" to the page. An idea I have right now is the search bar where if you search up "buffalos" it will direct you to the page. We are also planning on changing the searchbar to a logo/picture tab thing.
