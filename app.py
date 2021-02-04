@@ -102,7 +102,7 @@ def signup():
         return redirect(url_for('home_route'))
 
 
-    return render_template("signup.html", form = form, projects=projects.setup())
+    return render_template("auth_user.html", form = form, projects=projects.setup())
 
 @app.route('/dashboard/')
 def showboard():
