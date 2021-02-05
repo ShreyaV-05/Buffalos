@@ -23,6 +23,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+# Shreya log in page
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -47,6 +48,42 @@ class RegisterForm(FlaskForm):
     email = StringField('email', validators=[InputRequired(), Email(message='Invalid Email'),Length(max=50)])
     username = StringField('username',validators=[InputRequired(), Length(min=4,max=15)])
     password = PasswordField('password',validators=[InputRequired(), Length(min=8,max=80)])
+
+
+
+# Andrea Coming Soon Page
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'Food'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///foods.db'
+db = SQLAlchemy(app)
+Bootstrap(app)
+records = []
+
+class Cuisines(db.Model):
+    cuisine = db.Column('item_id', db.String(50), primary_key=True)
+    restaurant = db.Column(db.String(100))
+    location = db.Column(db.String(50))
+    price = db.Column(db.Float(200))
+
+
+def __init__(self, location, restaurant, cuisine, price):
+    self.restaurant = restaurant
+    self.location = location
+    self.cuisine = cuisine
+    self.price = price
+
+
+"Create Database"
+db.create_all()
+
+class FoodForm(FlaskForm):
+    cuisine = StringField('cuisine', validators=[InputRequired(), Length(min=1, max=15)])
+    restaurant = StringField('restaurant', validators=[InputRequired(), Length(min=1, max=80)])
+    price = StringField('price', validators=[InputRequired()])
+    location = StringField('location', validators=[InputRequired()])
+
+
 
 
 @app.route('/')
@@ -118,14 +155,13 @@ def showboard():
 @app.route('/random/',methods=['GET','POST'])
 def random():
     #call to random number web api
-    url ='https://csrng.net/csrng/csrng.php?min=0&max=5'
+    url ='https://csrng.net/csrng/csrng.php?min=1&max=5'
     resp = requests.get(url)
 
     #formatting variables from return
     random = resp.json()[0]['random']
     print(random)
     return render_template('random.html', random=random)
-    return render_template('joke.html', setup=setup, punchline=punchline)
 
 """
 # For Recommend Page
@@ -192,6 +228,25 @@ def create():
 
 """
 
+# Continue Andrea Coming Soon Page
+
+def list_map():  # mapping the front end to the backend, put in the function so we don't have to copy and paste this all the time
+    food = Cuisines.query.all()
+    for food in food:
+        user_dict = {'cuisine': food.cuisine, 'location': food.location, 'restaurant': food.restaurant, 'price': food.price}
+        records.append(user_dict)
+
+list_map()
+@app.route("/soon/", methods=['GET', "POST"])
+def soon_route():
+    form = FoodForm()
+    if form.validate_on_submit():  # adding in all
+        new_food = Cuisines(cuisine=form.cuisine.data, restaurant=form.restaurant.data, price=form.price.data, location = form.location.data)
+        db.session.add(new_food)
+        db.session.commit()
+        user_dict = {'restaurant': new_food.restaurant, 'location': new_food.location, 'cuisine': new_food.cuisine, 'price': new_food.price}
+        records.append(user_dict)
+    return render_template("coming_soon.html", form=form, table=records)
 
 if __name__ == "__main__":
     app.run(debug = True, port=8080)

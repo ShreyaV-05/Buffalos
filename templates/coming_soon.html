@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% extends "soon_base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block style %}
+<style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+{% endblock %}
+
+<!-- block title
+<div class="jumbotron jumbotron-fluid" style="height: 50%; ">
+    <div class="row justify-content-center">
+        <div class="col-10" style="text-align: center;">
+            <h1>Coming Soon</h1>
+        </div>
+    </div>
+</div>
+endblock
+-->
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-10" style="text-align: center;">
+        <h1>Coming Soon</h1>
+    </div>
+</div>
+<table>
+    <tr>
+        <th>Type of Cuisine</th>
+        <th>Name of Restaurant</th>
+        <th>Location (SD, LA, SF)</th>
+        <th>Price (Rating out of 5)</th>
+    </tr>
+    <!-- Loop through rows in table -->
+    {% for row in table %}
+    <tr>
+        <th>{{ row['cuisine'] }}</th>
+        <th>{{ row['restaurant'] }}</th>
+        <th>{{ row['location'] }}</th>
+        <th>{{ row['price'] }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+<!-- Create action, input and "Add" a new row to table  -->
+<div class="jumbotron jumbotron-fluid" style="height: 50%; ">
+
+
+
+    <div class="row courses-buttons justify-content-center">
+
+        <form class="form-append" method="POST" action="/soon/">
+            {{ form.hidden_tag() }}
+            <h2 class="form-signin-heading">Enter cuisines you would like to see be added into the website in the future...</h2>
+            {{wtf.form_field(form.restaurant)}}
+            {{wtf.form_field(form.cuisine)}}
+            {{wtf.form_field(form.price)}}
+            {{wtf.form_field(form.location)}}
+            <button class="btn btn-lg btn-primary btn-block" type="submit">submit</button>
+        </form>
+
+
+    </div>
+</div>
+{% endblock %}

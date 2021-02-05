@@ -78,11 +78,12 @@
 
 <!-- Page Header -->
 <h2>Pick for me!</h2>
-<caption id="move"
+<caption id="move"></caption>
 <caption>Random Cuisine Generator</caption>
 
 
 <!-- Random Number Generator -->
+<!-- "form" for interactive controls -->
 <p class="numcenter">{{random}}</p>
 <form class="btncenter" method="POST" ID="myForm" action={{url_for('.random')}} >
     <input type="submit" value="New Cuisine">
