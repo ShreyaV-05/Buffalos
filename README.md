@@ -60,23 +60,8 @@ Our current web pages on the running site include:
 |Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html and link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182). This ticket is about the recommendation page (which will be a part of the nav bar) where users will be able to recommend more types of cuisines and specific restuarants they would like to see added to the website in the future. On the srum board, the front end is in the "ready to deploy column" and the back end of this page is in the "in progress" column as I am still working through errors: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937575, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937578  | 19/20  |
 |Ticket 3: Drop Down Menu, Deployment (given extension due to technical errors)   |Diane   |Fixed drop-down menu (menu originally did not register when I hovered over it): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/tree/main/static. Also worked on deployment but per our discussion on Friday, I am restarting with Raspberry Pi and am still working on it over the weekend. On scrumboard, dropdown is complete: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52420810.   | 18/20  |
 
-# January 28 - Big Tickets #
-## Ticket 1: Create "Coming Soon" Page - Andrea ##
-* "Coming Soon" Page will consist of a table of cuisines that will be "coming soon" to the website. Will use meta data to be able to sort the cuisines by location (San Diego, Los Angeles, San Francisco) and possibly by the general price as well ($,$$,$$$)
-* link to code
-* scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804462
 
-## Ticket 2: Create Review Page/ Login Page/ Sessions Ticket - Shreya ##
-* Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars). If time work on login page frontend and start backend (or if the review page is too hard to generate within a week), which would include code for the sessions.
-* link to code
-* Scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899 https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747 https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804584
-
-## Ticket 3: Create Easter Egg with page - Diane ##
-* Create a page holding exam resources such as journals, articles/sites, TPTs, slideshows. I want to try to create a secret "passageway" to the page. An idea I have right now is the search bar where if you search up "buffalos" it will direct you to the page. We are also planning on changing the searchbar to a logo/picture tab thing.
-* link to code
-* scrumboard: https://github.com/ShreyaV-05/Buffalos/projects/1#card-53778656
-
-# January 28 Tickets
+# January 28: Ticket Plans for Week 2/1-2/5
 |Tickets   |Assigned To   |Description   |Scrumboard   |
 |---|---|---|---|
 |Ticket 1: Review Page/ Login Page/ Sessions Ticket  |Shreya   |Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars). If time work on login page frontend and start backend (or if the review page is too hard to generate within a week), which would include code for the sessions.| https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573, https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747, https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804584  |
