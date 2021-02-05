@@ -67,7 +67,7 @@ def sanfrancisco_route():
 
 @app.route("/responserev/")
 def responserev_route():
-    return render_template("responserev.html",)
+    return render_template("responserev.html",projects=projects.setup())
 
 #Create the Login Page
 @app.route('/login/',methods = ['GET','POST'])
@@ -90,7 +90,7 @@ def login():
         return '<h1>Invalid username or password</h1>'
 
     return render_template("login.html", form = form, projects=projects.setup())
-"""
+
 #Create the SignUp Page
 @app.route('/signup/',methods = ['GET','POST'])
 def signup():
@@ -106,8 +106,8 @@ def signup():
 
 @app.route('/dashboard/')
 def showboard():
-    return render_template("DashBoard.html", projects=projects.setup())
-"""
+    return render_template("dashBoard.html", projects=projects.setup())
+
 
 
 # For Random Cuisine Generator

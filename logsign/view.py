@@ -1,4 +1,3 @@
-from views.pythondb import init_bp
 from flask import render_template, request, redirect, url_for
 # session and database support
 from flask_login import login_required
@@ -35,7 +34,7 @@ def create():
 # the public page does not include @login_required
 @app.route('/public/')
 def public():
-    return render_template("pythondb/public_page.html")
+    return render_template("templates/public_page.html")
 
 
 @app.route('/auth_user/', methods=["GET", "POST"])
@@ -50,9 +49,9 @@ def auth_user():
         }
         # model_authorize requires user_dict: user_name, email, password
         model_authorize(user_dict)
-        return redirect(url_for('pythondb_bp.login'))
+        return redirect(url_for('templates.login'))
     # show the auth user page if the above fails for some reason
-    return render_template("pythondb/auth_user.html")
+    return render_template("templates/auth_user.html")
 
 
 # if login url, show phones table only
@@ -66,17 +65,17 @@ def login():
             'password': request.form.get("txtPwd1")
         }
         if model_login(user_dict):
-            return redirect(url_for('pythondb_bp.dashboard'))
+            return redirect(url_for('templates.dashboard'))
 
     # if not logged in, show the login page
-    return render_template("pythondb/login.html")
+    return render_template("templates/login.html")
 
 
 # logged in users can see the dashboard
 @app.route('/dashboard/')
 @login_required  # this is the code that Flask-Login uses to stop non logged in users
 def dashboard():
-    return render_template("pythondb/dashboard.html")
+    return render_template("templates/dashboard.html")
 
 
 # give users a way to log out
@@ -85,11 +84,11 @@ def dashboard():
 def logout():
     """User log-out logic."""
     model_logout()
-    return redirect(url_for('pythondb_bp.login'))
+    return redirect(url_for('templates.login'))
 
 
 # this code lets Flask-Login take unauthorised users back to the login page
 @login_manager.unauthorized_handler
 def unauthorized():
     """Redirect unauthorized users to Login page."""
-    return redirect(url_for('pythondb_bp.login'))
+    return redirect(url_for('templates.login'))
