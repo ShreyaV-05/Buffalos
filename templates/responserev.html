@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+{% block style %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 * {
   box-sizing: border-box;
 }
@@ -67,7 +66,8 @@ input[type=submit]:hover {
   }
 }
 </style>
-</head>
+{% endblock %}
+
 {% block content %}
 <style>
         table {
@@ -88,7 +88,6 @@ input[type=submit]:hover {
         }
     </style>
 <body>
-{% endblock %}
 **Table block is dependent on table variable and dictionary setup **
 <table>
     <tr>
@@ -112,64 +111,64 @@ input[type=submit]:hover {
 <h2>Responsive Form</h2>
 
 <div class="container">
-    <form method="POST" ID="myForm" action={{url_for('.create')}}>
+    <form method="POST" ID="myForm" action={{url_for('.responserev_route')}}>
         <div class="row">
             <div class="col-25">
                 <label for="fname">First Name</label>
-            <div/>
-            <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            <div/>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="lname">Last Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="cuisine">Cuisine</label>
-            </div>
-            <div class="col-75">
-                <select id="cuisine" name="cuisine">
-                    <option value="asian">Asian</option>
-                    <option value="italian">Italian</option>
-                    <option value="mexican">Mexican</option>
-                    <option value="other">Other</option>
-                </select>
-            <div>
-         </div>
-        <div class="row">
-             <div class="col-25">
-                   <label for="review">Review</label>
-              </div>
-              <div class="col-75">
-                     <textarea id="review" name="review" placeholder="Write something.." style="height:200px"></textarea>
-              </div>
-        <div/>
-         <div class="row">
-             <div class="col-25">
-                  <label for="rate">Rating</label>
-             </div>
-             <div class="col-75">
-                  <select id="rate" name="rate">
-                     <option value=1>1 star</option>
-                     <option value=2>2 star</option>
-                     <option value=3>3 star</option>
-                     <option value=4>4 star</option>
-                     <option value=5>5 star</option>
-                   </select>
-             </div>
-         </div>
-        <div class="row">
-              <input type="submit" value="Submit">
-        </div>
-        </div>
+                <div/>
+                <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <div/>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="cuisine">Cuisine</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="cuisine" name="cuisine">
+                            <option value="asian">Asian</option>
+                            <option value="italian">Italian</option>
+                            <option value="mexican">Mexican</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="review">Review</label>
+                            </div>
+                            <div class="col-75">
+                                <textarea id="review" name="review" placeholder="Write something.." style="height:200px"></textarea>
+                            </div>
+                            <div/>
+                            <div class="row">
+                                <div class="col-25">
+                                    <label for="rate">Rating</label>
+                                </div>
+                                <div class="col-75">
+                                    <select id="rate" name="rate">
+                                        <option value=1>1 star</option>
+                                        <option value=2>2 star</option>
+                                        <option value=3>3 star</option>
+                                        <option value=4>4 star</option>
+                                        <option value=5>5 star</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </div>
 
     </form>
 </div>
 </body>
-</html>
+{% endblock %}
