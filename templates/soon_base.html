@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body>
+<!-- Navigation Bar from bootstrap -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">{{name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/sandiego/">San Diego</a>
+            <a class="nav-link" href="/losangeles/">Los Angeles</a>
+            <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
+            <a class="nav-link" href="/search/">Search</a>
+            <a class="nav-link" href="/joke/">Joke</a>
+            <a class="nav-link" href="/recommend/">Recommend</a>
+            <a class="nav-link" href="/soon/">Soon</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </div>
+    </div>
+</nav>
+
+<div class="product" style="margin-top: 2%;">
+    <div class="row" style="padding-top: 0%; padding-bottom: 5%;">
+
+        <div class="col-8" >
+            {% block title %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+
+<!-- will remove later, for now keeping as reference for possible ideas -->
+{% block style %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+</html>

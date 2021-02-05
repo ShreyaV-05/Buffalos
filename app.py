@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import Form, BooleanField, StringField, PasswordField
-from wtforms.validators import InputRequired,Email,Length
+from wtforms.validators import InputRequired, Email, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
@@ -11,7 +11,6 @@ import requests
 from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'AnimeisGOOD'
@@ -23,105 +22,155 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+
+# Shreya log in page
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+
 class User(UserMixin, db.Model):
-    id = db.Column(db.Integer,primary_key = True)
-    username = db.Column(db.String(15),unique = True)
-    email = db.Column(db.String(50),unique = True)
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(15), unique=True)
+    email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(80))
 
     def __repr__(self):
         return '<Task %r>' % self.id
 
+
 class LoginForm(FlaskForm):
-    username = StringField('username',validators=[InputRequired(), Length(min=4,max=15)])
-    password = PasswordField('password',validators=[InputRequired(), Length(min=8,max=80)])
+    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
     remember = BooleanField('remember me')
 
 
-
 class RegisterForm(FlaskForm):
-    email = StringField('email', validators=[InputRequired(), Email(message='Invalid Email'),Length(max=50)])
-    username = StringField('username',validators=[InputRequired(), Length(min=4,max=15)])
-    password = PasswordField('password',validators=[InputRequired(), Length(min=8,max=80)])
+    email = StringField('email', validators=[InputRequired(), Email(message='Invalid Email'), Length(max=50)])
+    username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
+    password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
+
+
+# Andrea Coming Soon Page
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'Food'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///foods.db'  # telling program where to put the database
+db = SQLAlchemy(app)  # db defined here
+Bootstrap(app)
+records = []
+
+
+# class defines database -- what rows you want in database
+class Cuisines(db.Model):
+    cuisine = db.Column('item_id', db.String(50), primary_key=True)
+    restaurant = db.Column(db.String(100))
+    location = db.Column(db.String(50))
+    price = db.Column(db.Float(200))
+
+
+# constructor that initializes the database
+def __init__(self, location, restaurant, cuisine, price):
+    self.restaurant = restaurant
+    self.location = location
+    self.cuisine = cuisine
+    self.price = price
+
+
+"Create Database"
+db.create_all()  # creates food.db file
+
+
+class FoodForm(FlaskForm):
+    cuisine = StringField('cuisine', validators=[InputRequired(), Length(min=1, max=15)])
+    restaurant = StringField('restaurant', validators=[InputRequired(), Length(min=1, max=80)])
+    price = StringField('price', validators=[InputRequired()])
+    location = StringField('location', validators=[InputRequired()])
 
 
 @app.route('/')
 def home_route():
     return render_template("home.html", projects=projects.setup())
 
+
 @app.route("/sandiego/")
 def sandiego_route():
     return render_template("sandiego.html", projects=projects.setup())
+
 
 @app.route("/losangeles/")
 def losangeles_route():
     return render_template("losangeles.html", projects=projects.setup())
 
+
 @app.route("/sanfrancisco/")
 def sanfrancisco_route():
     return render_template("sanfrancisco.html", projects=projects.setup())
 
+
 @app.route("/responserev/")
 def responserev_route():
-    return render_template("responserev.html",projects=projects.setup())
+    return render_template("responserev.html", projects=projects.setup())
 
-#Create the Login Page
-@app.route('/login/',methods = ['GET','POST'])
+
+@app.route("/easteregg/")
+def easteregg_route():
+    return render_template("easteregg.html", projects=projects.setup())
+
+
+# Create the Login Page
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
-    #TODO: Make the form accept the User Value, or somehow update the form
+    # TODO: Make the form accept the User Value, or somehow update the form
     form = LoginForm()
-    #TODO Make The SQL Database work
+    # TODO Make The SQL Database work
 
     if form.validate_on_submit():
-        #exists = db.session.query(
-        #db.session.query(User).filter_by(username='AndrewZhang').exists()
-        #).scalar()
-        #if exists == True:
-        #return "Exists"
-        user = User.query.filter_by(username = form.username.data).first()
+        # exists = db.session.query(
+        # db.session.query(User).filter_by(username='AndrewZhang').exists()
+        # ).scalar()
+        # if exists == True:
+        # return "Exists"
+        user = User.query.filter_by(username=form.username.data).first()
         if user:
             if user.password == form.password.data:
                 return redirect(url_for('showboard'))
 
         return '<h1>Invalid username or password</h1>'
 
-    return render_template("login.html", form = form, projects=projects.setup())
+    return render_template("login.html", form=form, projects=projects.setup())
 
-#Create the SignUp Page
-@app.route('/signup/',methods = ['GET','POST'])
+
+# Create the SignUp Page
+@app.route('/signup/', methods=['GET', 'POST'])
 def signup():
     form = RegisterForm()
     if form.validate_on_submit():
-        new_user = User(username = form.username.data, email = form.email.data, password = form.password.data)
+        new_user = User(username=form.username.data, email=form.email.data, password=form.password.data)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('home_route'))
 
+    return render_template("auth_user.html", form=form, projects=projects.setup())
 
-    return render_template("auth_user.html", form = form, projects=projects.setup())
 
 @app.route('/dashboard/')
 def showboard():
     return render_template("dashBoard.html", projects=projects.setup())
 
 
-
 # For Random Cuisine Generator
-@app.route('/random/',methods=['GET','POST'])
+@app.route('/random/', methods=['GET', 'POST'])
 def random():
-    #call to random number web api
-    url ='https://csrng.net/csrng/csrng.php?min=0&max=5'
+    # call to random number web api
+    url = 'https://csrng.net/csrng/csrng.php?min=1&max=5'
     resp = requests.get(url)
 
-    #formatting variables from return
+    # formatting variables from return
     random = resp.json()[0]['random']
     print(random)
     return render_template('random.html', random=random)
-    return render_template('joke.html', setup=setup, punchline=punchline)
+
 
 """
 # For Recommend Page
@@ -189,5 +238,35 @@ def create():
 """
 
 
+# Continue Andrea Coming Soon Page
+
+
+# shows what is in the database even if you reload the program (preserving the existence of the items in the database)
+# showing old items in the table
+def list_map():  # mapping the front end to  backend, put in the function so we don't have to copy paste all the time
+    food = Cuisines.query.all()
+    for food in food:
+        user_dict = {'cuisine': food.cuisine, 'location': food.location, 'restaurant': food.restaurant,
+                     'price': food.price}
+        records.append(user_dict)
+        # records is a list initiated at top of code, showcases all the items appending to the database
+
+
+# calling the method list_map()
+list_map()
+@app.route("/soon/", methods=['GET', "POST"])
+def soon_route():
+    form = FoodForm()
+    if form.validate_on_submit():  # adding in all
+        new_food = Cuisines(cuisine=form.cuisine.data, restaurant=form.restaurant.data, price=form.price.data,
+                            location=form.location.data)
+        db.session.add(new_food)
+        db.session.commit()
+        user_dict = {'restaurant': new_food.restaurant, 'location': new_food.location, 'cuisine': new_food.cuisine,
+                     'price': new_food.price}
+        records.append(user_dict)  # adding a new item to the table
+    return render_template("coming_soon.html", form=form, table=records)
+
+
 if __name__ == "__main__":
-    app.run(debug = True, port=8080)
+    app.run(debug=True, port=8080)
