@@ -92,7 +92,7 @@ def login():
     return render_template("login.html", form = form, projects=projects.setup())
 
 #Create the SignUp Page
-@app.route('/signup/',methods = ['GET','POST'])
+@app.route('/auth_user/',methods = ['GET','POST'])
 def signup():
     form = RegisterForm()
     if form.validate_on_submit():
