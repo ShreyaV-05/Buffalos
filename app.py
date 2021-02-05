@@ -67,7 +67,7 @@ def sanfrancisco_route():
 
 @app.route("/responserev/")
 def responserev_route():
-    return render_template("responserev.html", projects=projects.setup())
+    return render_template("responserev.html",)
 
 #Create the Login Page
 @app.route('/login/',methods = ['GET','POST'])

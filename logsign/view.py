@@ -10,7 +10,7 @@ from models.login import model_authorize, model_login, model_logout
 
 
 # connects default URL to a function
-@pythondb_bp.route('/')
+@app.route('/')
 def databases():
     """convert Users table into a list of dictionary rows"""
     records = model_query_all()
@@ -18,7 +18,7 @@ def databases():
 
 
 # create/add a new record to the table
-@pythondb_bp.route('/create/', methods=["POST"])
+@app.route('/create/', methods=["POST"])
 def create():
     if request.form:
         """extract data from form"""
@@ -33,12 +33,12 @@ def create():
 # Authorise User Section
 # if auth user is the signup section
 # the public page does not include @login_required
-@pythondb_bp.route('/public/')
+@app.route('/public/')
 def public():
     return render_template("pythondb/public_page.html")
 
 
-@pythondb_bp.route('/auth_user/', methods=["GET", "POST"])
+@app.route('/auth_user/', methods=["GET", "POST"])
 def auth_user():
     # check form inputs and create auth user
     if request.form:
@@ -56,7 +56,7 @@ def auth_user():
 
 
 # if login url, show phones table only
-@pythondb_bp.route('/login/', methods=["GET", "POST"])
+@app.route('/login/', methods=["GET", "POST"])
 def login():
     if request.form:
         # validation should be in HTML
@@ -73,14 +73,14 @@ def login():
 
 
 # logged in users can see the dashboard
-@pythondb_bp.route('/dashboard/')
+@app.route('/dashboard/')
 @login_required  # this is the code that Flask-Login uses to stop non logged in users
 def dashboard():
     return render_template("pythondb/dashboard.html")
 
 
 # give users a way to log out
-@pythondb_bp.route("/logout")
+@app.route("/logout")
 @login_required
 def logout():
     """User log-out logic."""
