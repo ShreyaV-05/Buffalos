@@ -113,6 +113,11 @@ def responserev_route():
     return render_template("responserev.html", projects=projects.setup())
 
 
+@app.route("/responserev/")
+def rating_route():
+    return render_template("rating.html", projects=projects.setup())
+
+
 @app.route("/easteregg/")
 def easteregg_route():
     return render_template("easteregg.html", projects=projects.setup())
