@@ -15,7 +15,6 @@
       text-align: center;
       background-image: url('//artofcatering.com.au/wp-content/uploads/2017/11/asian-cuisines.jpg');
       background-size: 50% 300px;
-      opacity: 0.5;
       }
 
 
@@ -30,6 +29,21 @@
       margin-left: auto;
       margin-right: auto;
       width: 50%;
+      }
+
+      div.polaroid {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin-bottom: 25px;
+
+      }
+
+      div.container {
+      text-align: center;
+      padding: 10px 20px;
       }
 
     </style>
@@ -53,18 +67,15 @@
                     <a class="nav-link" href= "/signup/">Signup</a>
                     <a class="nav-link" href= "/dashboard/">Dashboard</a>
                     <a class="nav-link" href= "/recommend/">Recommend</a>
-                    <a class="nav-link" href="/sandiego/">San Diego</a>
-                    <a class="nav-link" href="/losangeles/">Los Angeles</a>
-                    <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
                     <a class="nav-link" href="/responserev/">Response Form</a>
-                    <a class="nav-link" href="/recommend/">Recommend</a>
+                    <a class="nav-link" href="/soon/">Coming Soon</a>
                     <a class="nav-link" href="/random/">Pick For Me!</a>
                     <a class="nav-link" href="/easteregg/">Easter Egg (WIP)</a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Restaurants
                         </a>
-                        <div class="dropdown-menu" style="position: absolute; z-index: 2;">
+                        <div class="dropdown-menu" style="position: absolute; z-index: 2; background-color: black;">
                             <a class="nav-link" href="/sandiego/">San Diego</a>
                             <a class="nav-link" href="/losangeles/">Los Angeles</a>
                             <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
@@ -111,11 +122,40 @@
 
         </div>
     </div>
+
+    <div>
+        <h1 style="background-color: white;">WELCOME! EXPLORE SEVERAL CUSINES IN SOME OF CALIFORNIA'S MAJOR CITIES!</h1>
+
+        <a href="/easteregg/">
+            <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/en/7/7e/Buffalo_wildwings_logo18.png"
+                 width=116" height="54">
+        </a>
+    </div>
+
+    <div class="polaroid">
+        <img src="https://ca-times.brightspotcdn.com/dims4/default/bdc2b9b/2147483647/strip/true/crop/2048x1365+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Ff4%2Fa0%2F7b37bd7a1497339ece5c614c5ec2%2Fla-2440533-me-sd-aerials-039-jpg-20160426" alt="San Diego" style="width:100%">
+        <div class="container">
+            <p>San Diego</p>
+        </div>
+    </div>
+
+    <div class="polaroid">
+        <img src="https://content.tripster.com/travelguide/wp-content/uploads/2016/10/1200_Los_Angeles_Downtown-min-768x520.v1-750x450.jpg" alt="Los Angeles" style="width:100%">
+        <div class="container">
+            <p>Los Angeles</p>
+        </div>
+    </div>
+
+    <div class="polaroid">
+        <img src="https://www.thephotoargus.com/wp-content/uploads/2017/05/san-francisco-baker-beach-1.jpg" alt="San Francisco" style="width:100%">
+        <div class="container">
+            <p>San Francisco</p>
+        </div>
+    </div>
+
+
 </body>
 
-{% block content %}
-
-{% endblock %}
 {% block script %}
 <script src="https://threejs.org/build/three.js"></script>
 <!--
@@ -123,14 +163,5 @@
 <script src="../static/bootstrap.bundle.min.js"></script>
 
 {% endblock %}
-    </div>
 
-<h1 style="background-color: white;">WELCOME! EXPLORE SEVERAL CUSINES IN SOME OF CALIFORNIA'S MAJOR CITIES!</h1>
-
-<a href="/easteregg/">
-    <img alt="Qries" src="https://upload.wikimedia.org/wikipedia/en/7/7e/Buffalo_wildwings_logo18.png"
-         width=116" height="54">
-</a>
-
-</body>
 </html>
