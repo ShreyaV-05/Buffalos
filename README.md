@@ -57,11 +57,11 @@ Our current web pages on the running site include:
 |Tab  |Link to Code |
 | --- |           ---           |
 |Navigation Bar to take to seperate tabs| (CODE FOR NAV BAR)|
-|Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html: Code for Signup html: Code for the backend (folders): |
-|Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code: backend (link to folder with multiple .py files): |
-|Rating| html frontend layout (will have three seperate review pages for each location): backend code (for the San Diego Code (playing around and unfinished therefore not in website): |
+|Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/login.html#L1-L49 Code for Signup html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/auth_user.html#L1-L51 Code for the backend (folders):https://github.com/ShreyaV-05/Buffalos/tree/main/models |
+|Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/responserev.html#L1-L124 backend (link to folder with multiple .py files):https://github.com/ShreyaV-05/Buffalos/tree/main/resprev |
+|Rating| html frontend layout (will have three seperate review pages for each location):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/rating.html#L1-L297 backend code (for the San Diego Code (playing around and unfinished therefore not in website):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/SDREV.html#L40-L59 |
 |Restuarants Drop Down Menu| (ADD LINKS TO CODE)|
-|Los Angeles Tab|Frontend Code: |
+|Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
 
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
