@@ -54,7 +54,8 @@ Our current web pages on the running site include:
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
 * 
 # February 19: Project Review:
-|Tabs.  |Link to Code. |
+|Tab  |Link to Code |
+| --- |           ---           |
 |Navigation Bar to take to seperate tabs| (CODE FOR NAV BAR)|
 |Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html: Code for Signup html: Code for the backend (folders): |
 |Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code: backend (link to folder with multiple .py files): |
