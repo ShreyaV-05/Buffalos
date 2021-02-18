@@ -1,0 +1,78 @@
+{% extends 'layout.html' %}
+{% block styles %}
+<!-- styles would go in here -->
+<style type="text/css">
+            .tabs{
+                margin: 0 auto;
+                }
+
+            #tab-list{
+                padding-bottom: 1rem;
+            }
+
+            .tab{
+                border-radius: 40px;
+                display: inline-block;
+                text-decoration: none;
+                padding: .5rem 1rem;
+                color: white;
+                background: navy;
+                margin: .5em .5em 1em;
+                letter-spacing: 1.5px;
+            }
+
+
+            .tab.active{
+                background-color: cornflowerblue;
+            }
+
+            .tab-content{
+                display: none;
+            }
+
+            .show{
+                display: block;
+            }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<h1>San Diego Reviews</h1>
+
+    {% endif %}
+    <div id="tab-one" class="tab-content show">
+        <table class="score">
+            <tr>
+                <th>Restaurant</th>
+                <th>Review</th>
+            </tr>
+            {% for cuisine in cuisines  %}
+            <tr>
+                <td>{{cuisine.Harney Sushi}}</td>
+                <td>{{cuisine.Harney Sushi.reviews}</td>
+            </tr>
+            {%  endfor %}
+        </table>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% if username != '' %}
+<script type="text/javascript">
+    $('#tab-list').on('click', '.tab', function(e){
+        //e captures the event object
+        console.log(e);
+
+        e.preventDefault(); //don't do the default behavior
+        $('.tab').removeClass('active');
+        $('.tab-content').removeClass('show');
+        $(this).addClass('active');
+        $($(this).attr('href')).addClass('show');
+
+    })
+</script>
+{% endif %}
+{% endblock %}
+</html>
