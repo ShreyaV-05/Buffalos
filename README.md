@@ -52,6 +52,15 @@ Our current web pages on the running site include:
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
+* 
+# February 19: Project Review:
+|Tabs.  |Link to Code. |
+|Navigation Bar to take to seperate tabs| (CODE FOR NAV BAR)|
+|Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html: Code for Signup html: Code for the backend (folders): |
+|Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code: backend (link to folder with multiple .py files): |
+|Rating| html frontend layout (will have three seperate review pages for each location): backend code (for the San Diego Code (playing around and unfinished therefore not in website): |
+|Restuarants Drop Down Menu| (ADD LINKS TO CODE)|
+|Los Angeles Tab|Frontend Code: |
 
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
@@ -59,21 +68,7 @@ Our current web pages on the running site include:
 |Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).| 19/20  |
 |Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html and link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182). This ticket is about the recommendation page (which will be a part of the nav bar) where users will be able to recommend more types of cuisines and specific restuarants they would like to see added to the website in the future. On the srum board, the front end is in the "ready to deploy column" and the back end of this page is in the "in progress" column as I am still working through errors: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937575, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937578  | 19/20  |
 |Ticket 3: Drop Down Menu, Deployment (given extension due to technical errors)   |Diane   |Fixed drop-down menu (menu originally did not register when I hovered over it): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/tree/main/static. Also worked on deployment but per our discussion on Friday, I am restarting with Raspberry Pi and am still working on it over the weekend. On scrumboard, dropdown is complete: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52420810.   | 18/20  |
-# February 19: Project Review:
-# Navigation Bar to take to seperate tabs: (CODE FOR NAV BAR)
-Login/Signup Tabs (Worked on create aspect but the rest is underway):
-  Code for login html:
-  Code for Signup html:
-  Code for the backend (folders):
-Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it)):
-  html:
-  backend (link to folder with multiple .py files):
-Rating:
-  html frontend layout (will have three seperate review pages for each location):
-  backend code (for the San Diego Code (playing around and unfinished therefore not in website):
- # Restuarants Drop Down Menu: (ADD LINKS TO CODE)
- Los Angeles Tab:
-  Frontend Code:
+
 # January 28: Ticket Plans for Week 2/1-2/5
 |Tickets   |Assigned To   |Description   |Scrumboard   |
 |---|---|---|---|
