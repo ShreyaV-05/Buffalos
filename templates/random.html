@@ -27,12 +27,119 @@
         }
 
         .btncenter {
-        padding:20px;
+        padding: 20px;
         }
 
         h1 {
         padding: 20px;
         }
+
+        .mainwheel{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        }
+
+        .mainwheel:after{
+        position: absolute;
+        content: '';
+        width: 32px;
+        height: 32px;
+        background: url('https://toppng.com/uploads/preview/arrow-pointing-to-the-left-115501167743epfu1fapc.png');
+        background-size: 32px;
+        right: -50px;
+        top: 50%;
+        }
+
+        .wheel{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 10px solid #fff;
+        overflow: hidden;
+        }
+
+        span{
+        width: 50%;
+        height: 50%;
+        display: inline-block;
+        position: absolute;
+        }
+
+        .span1{
+        clip-path: polygon(0 92%, 100% 50%, 0 8%);
+        background-color: #3498DB;
+        top: 120px;
+        left: 0;
+        }
+
+        .span2{
+        clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+        background-color: #1F618D;
+        top: 120px;
+        right: 0;
+        }
+
+        .span3{
+        clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+        background-color: #85C1E9;
+        bottom: 0;
+        left: 120px;
+        }
+
+        .span4{
+        clip-path: polygon(50% 100%, 92% 0, 8% 0);
+        background-color: #154360;
+        top: 0;
+        left: 120px;
+        }
+
+        .wheel2{
+        width: 100%;
+        height: 100%;
+        transform: rotate(-135deg);
+        }
+
+        span b{
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        border-radius: 50%;
+        font-size: 10px;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: insert 0 3px 3px 0 #717171;
+        }
+
+        .spin_btn{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        background-color: #6B5101;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        }
+
+        .spin_btn:active{
+        width:55px;
+        height: 55px;
+        font-size: 18px;
+
+
+
+
+
 
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -88,6 +195,43 @@
 <form class="btncenter" method="POST" ID="myForm" action={{url_for('.random')}} >
     <input type="submit" value="New Cuisine">
 </form>
+
+
+
+
+
+<div class="mainwheel"> <!--circle border for wheel -->
+    <div class="wheel">
+        <div class="wheel1"> <!--every other slot on wheel-->
+            <span class="span1"><b>Harney Sushi</b></span>
+            <span class="span2"><b>Civico 1845</b></span>
+            <span class="span3"><b>Puesto</b></span>
+            <span class="span4"><b>Pending</b></span>
+        </div>
+        <div class="wheel2"> <!--the remaining slots in between the first four above -->
+            <span class="span1"><b>Pending</b></span>
+            <span class="span2"><b>Pending</b></span>
+            <span class="span3"><b>Pending</b></span>
+            <span class="span4"><b>Pending</b></span>
+        </div>
+
+        <button class="spin_btn">SPIN</button>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- Table that coordinates to generated number -->
