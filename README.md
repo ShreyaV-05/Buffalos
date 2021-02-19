@@ -57,11 +57,11 @@ Our current web pages on the running site include:
 |Tab  |Link to Code |
 | --- |           ---           |
 |Diane's Ticket: College Board Requirements (Easter Egg)| https://github.com/ShreyaV-05/Buffalos/blob/main/templates/easteregg.html|
-|Navigation Bar to take to seperate tabs| (CODE FOR NAV BAR)|
+|Navigation Bar to take to seperate tabs| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
 |Shreya's Ticket: Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/login.html#L1-L49 Code for Signup html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/auth_user.html#L1-L51 Code for the backend (folders):https://github.com/ShreyaV-05/Buffalos/tree/main/models |
 |Shreya's Ticket: Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/responserev.html#L1-L124 backend (link to folder with multiple .py files):https://github.com/ShreyaV-05/Buffalos/tree/main/resprev |
 |Shreya's Ticket: Rating| html frontend layout (will have three seperate review pages for each location):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/rating.html#L1-L297 backend code (for the San Diego Code (playing around and unfinished therefore not in website):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/SDREV.html#L40-L59 |
-|Diane's Ticket: Restuarants Drop Down Menu| (ADD LINKS TO CODE)|
+|Diane's Ticket: Restuarants Drop Down Menu| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
 |Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
 |Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
 # February 17: Cross-over Grading
@@ -73,7 +73,7 @@ Our current web pages on the running site include:
 |Easter Egg: 3/3| Implemented very well. Goes over College Board requirements as well as who am I requirements. Funny how the button linking to the easter egg was “Buffalo Wild Wings” since their group is named Buffalos.|
 |Project WOW: 2/2| RNG restaurant generator wow chooses a restaurant for you. UI is very polished and professional.|
 |Individual Participation (Tickets/Completions 2 pts, GitHub Heatmap 2 pts, WOW presence in group 1 pt): Andrea A. 5/5; Shreya V 5/5; Diane T 5/5| Ample evidence of full group participation. Each member was knowledgeable on their own tickets and what needed to be done in the future to improve the website. The heat map on GitHub showed their contributions |
-|Total:24/25 | Group score:19 /20|
+|Total: 24/25 | Group score:19 /20|
 |Recommendations for enhancements | Need to work on updating and deleting from the database. They should also change the background colour for their random restaurant chooser to a more vibrant green or blue. They can also work on how they present the result of the random restaurant. For example, they can add a wheel to get a random spin so it is more appealing to the users. |
 
 
