@@ -62,6 +62,7 @@ Our current web pages on the running site include:
 |Rating| html frontend layout (will have three seperate review pages for each location):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/rating.html#L1-L297 backend code (for the San Diego Code (playing around and unfinished therefore not in website):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/SDREV.html#L40-L59 |
 |Restuarants Drop Down Menu| (ADD LINKS TO CODE)|
 |Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
+|Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
 
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
