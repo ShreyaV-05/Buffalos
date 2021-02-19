@@ -56,6 +56,7 @@ Our current web pages on the running site include:
 # February 19: Project Review:
 |Tab  |Link to Code |
 | --- |           ---           |
+|College Board Requirements (Easter Egg)| https://github.com/ShreyaV-05/Buffalos/blob/main/templates/easteregg.html|
 |Navigation Bar to take to seperate tabs| (CODE FOR NAV BAR)|
 |Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/login.html#L1-L49 Code for Signup html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/auth_user.html#L1-L51 Code for the backend (folders):https://github.com/ShreyaV-05/Buffalos/tree/main/models |
 |Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/responserev.html#L1-L124 backend (link to folder with multiple .py files):https://github.com/ShreyaV-05/Buffalos/tree/main/resprev |
@@ -63,6 +64,18 @@ Our current web pages on the running site include:
 |Restuarants Drop Down Menu| (ADD LINKS TO CODE)|
 |Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
 |Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
+# February 17: Cross-over Grading
+|Requirements|Comments|
+|---| --- |
+|Clone, Run, Code Organization: 5/5| Code looks very organized. All pages of the code are in folders and were easy to find. Their code runs correctly and smoothly. Everyone is able to clone the code from GitHub and contribute to the project.|
+|Idea, Visuals, HTML, CSS, JS: 5/5| Pages look very polished. The text and images are all organized into different sections and those sections are defined by the rectangle backgrounds. The website is easy to follow and navigate.|
+|Routes, Model Code & CRUD: 4/5| Crud UI fully in place. Looks nice, but can only create/add cuisines. No function to read or delete yet. Routes added and can navigate to all pages.  |
+|Easter Egg: 3/3| Implemented very well. Goes over College Board requirements as well as who am I requirements. Funny how the button linking to the easter egg was “Buffalo Wild Wings” since their group is named Buffalos.|
+|Project WOW: 2/2| RNG restaurant generator wow chooses a restaurant for you. UI is very polished and professional.|
+|Individual Participation (Tickets/Completions 2 pts, GitHub Heatmap 2 pts, WOW presence in group 1 pt): Andrea A. 5/5; Shreya V 5/5; Diane T 5/5| Ample evidence of full group participation. Each member was knowledgeable on their own tickets and what needed to be done in the future to improve the website. The heat map on GitHub showed their contributions |
+|Total:24/25 | Group score:19 /20|
+|Recommendations for enhancements | Need to work on updating and deleting from the database. They should also change the background colour for their random restaurant chooser to a more vibrant green or blue. They can also work on how they present the result of the random restaurant. For example, they can add a wheel to get a random spin so it is more appealing to the users. |
+
 
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
