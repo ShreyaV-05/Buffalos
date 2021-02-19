@@ -53,7 +53,7 @@ Our current web pages on the running site include:
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
 * 
-# February 19: Project Review:
+# February 19: Project Review
 |Tab  |Link to Code |
 | --- |           ---           |
 |Diane's Ticket: College Board Requirements (Easter Egg)| https://github.com/ShreyaV-05/Buffalos/blob/main/templates/easteregg.html|
@@ -61,6 +61,7 @@ Our current web pages on the running site include:
 |Shreya's Ticket: Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/login.html#L1-L49 Code for Signup html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/auth_user.html#L1-L51 Code for the backend (folders):https://github.com/ShreyaV-05/Buffalos/tree/main/models |
 |Shreya's Ticket: Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/responserev.html#L1-L124 backend (link to folder with multiple .py files):https://github.com/ShreyaV-05/Buffalos/tree/main/resprev |
 |Shreya's Ticket: Rating| html frontend layout (will have three seperate review pages for each location):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/rating.html#L1-L297 backend code (for the San Diego Code (playing around and unfinished therefore not in website):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/SDREV.html#L40-L59 |
+|Andrea's Ticket: Coming Soon Page| frontend form: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/coming_soon.html, establishing table and creating database: https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L63-L84, showing old items and adding items into table: https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L246-L268|
 |Diane's Ticket: Restuarants Drop Down Menu| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
 |Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
 |Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
