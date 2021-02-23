@@ -52,6 +52,32 @@ Our current web pages on the running site include:
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
+* 
+# February 19: Project Review
+|Tab  |Link to Code |
+| --- |           ---           |
+|Diane's Ticket: College Board Requirements (Easter Egg)| https://github.com/ShreyaV-05/Buffalos/blob/main/templates/easteregg.html|
+|Navigation Bar to take to seperate tabs| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
+|Shreya's Ticket: Login/Signup Tabs (Worked on create aspect but the rest is underway)| Code for login html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/login.html#L1-L49 Code for Signup html:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/auth_user.html#L1-L51 Code for the backend (folders):https://github.com/ShreyaV-05/Buffalos/tree/main/models |
+|Shreya's Ticket: Response Form (type in a review for a restuarant (only SD restuarant's in because playing with code that will display it))| html code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/responserev.html#L1-L124 backend (link to folder with multiple .py files):https://github.com/ShreyaV-05/Buffalos/tree/main/resprev |
+|Shreya's Ticket: Rating| html frontend layout (will have three seperate review pages for each location):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/rating.html#L1-L297 backend code (for the San Diego Code (playing around and unfinished therefore not in website):https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/SDREV.html#L40-L59 |
+|Andrea's Ticket: Coming Soon Page (CRUD)| frontend form: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/coming_soon.html, establishing table and creating database: https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L63-L84, showing old items and adding items into table: https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L246-L268|
+|Andrea's Ticket: "Pick Me!" (Includes web api)| form for interactive button: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/random.html#L187-L192, backend for web api: https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L167-L177, creating wheel for the cuisines (as recommended by crossover team): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/random.html#L197-L237|
+|Diane's Ticket: Restuarants Drop Down Menu| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
+|Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
+|Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
+# February 17: Cross-over Grading
+|Requirements|Comments|
+|---| --- |
+|Clone, Run, Code Organization: 5/5| Code looks very organized. All pages of the code are in folders and were easy to find. Their code runs correctly and smoothly. Everyone is able to clone the code from GitHub and contribute to the project.|
+|Idea, Visuals, HTML, CSS, JS: 5/5| Pages look very polished. The text and images are all organized into different sections and those sections are defined by the rectangle backgrounds. The website is easy to follow and navigate.|
+|Routes, Model Code & CRUD: 4/5| Crud UI fully in place. Looks nice, but can only create/add cuisines. No function to read or delete yet. Routes added and can navigate to all pages.  |
+|Easter Egg: 3/3| Implemented very well. Goes over College Board requirements as well as who am I requirements. Funny how the button linking to the easter egg was “Buffalo Wild Wings” since their group is named Buffalos.|
+|Project WOW: 2/2| RNG restaurant generator wow chooses a restaurant for you. UI is very polished and professional.|
+|Individual Participation (Tickets/Completions 2 pts, GitHub Heatmap 2 pts, WOW presence in group 1 pt): Andrea A. 5/5; Shreya V 5/5; Diane T 5/5| Ample evidence of full group participation. Each member was knowledgeable on their own tickets and what needed to be done in the future to improve the website. The heat map on GitHub showed their contributions |
+|Total: 24/25 | Group score:19 /20|
+|Recommendations for enhancements | Need to work on updating and deleting from the database. They should also change the background colour for their random restaurant chooser to a more vibrant green or blue. They can also work on how they present the result of the random restaurant. For example, they can add a wheel to get a random spin so it is more appealing to the users. |
+
 
 # January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
@@ -59,7 +85,6 @@ Our current web pages on the running site include:
 |Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).| 19/20  |
 |Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html and link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182). This ticket is about the recommendation page (which will be a part of the nav bar) where users will be able to recommend more types of cuisines and specific restuarants they would like to see added to the website in the future. On the srum board, the front end is in the "ready to deploy column" and the back end of this page is in the "in progress" column as I am still working through errors: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937575, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937578  | 19/20  |
 |Ticket 3: Drop Down Menu, Deployment (given extension due to technical errors)   |Diane   |Fixed drop-down menu (menu originally did not register when I hovered over it): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/tree/main/static. Also worked on deployment but per our discussion on Friday, I am restarting with Raspberry Pi and am still working on it over the weekend. On scrumboard, dropdown is complete: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52420810.   | 18/20  |
-
 
 # January 28: Ticket Plans for Week 2/1-2/5
 |Tickets   |Assigned To   |Description   |Scrumboard   |
