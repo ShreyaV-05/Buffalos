@@ -49,7 +49,7 @@ def databases():
 
 @app.route('/create/', methods=["POST"])
 def create():
-    if request.form:
+    if request.form == "POST":
         """prepare data for primary table extracting from form"""
         user = User(fname=request.form.get("fname"), lname=request.form.get("lname"))
         """add and commit data to user table"""
