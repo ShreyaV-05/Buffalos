@@ -63,7 +63,6 @@ body {
             <h2></h2>
             <h5> Harney Sushi</h5>
             <div class="fakeimg" style="height:200px;">Image</div>
-            {% endif %}
             <div id="tab-one" class="tab-content show">
                 <table class="cuisine">
                     <tr>
@@ -72,8 +71,8 @@ body {
                     </tr>
                     {% for cuisine in cuisines  %}
                     <tr>
-                        <td>{{cuisine.Harney Sushi}}</td>
-                        <td>{{cuisine.Harney Sushi.reviews}</td>
+                        <td>{{cuisine.Harney_Sushi}}</td>
+                        <td>{{cuisine.Harney_Sushi.reviews}}</td>
                     </tr>
                     {%  endfor %}
                 </table>
