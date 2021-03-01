@@ -108,7 +108,7 @@ def sanfrancisco_route():
     return render_template("sanfrancisco.html", projects=projects.setup())
 
 
-@app.route("/responserev/")
+@app.route("/responserev/", methods=['GET', 'POST'])
 def responserev_route():
     return render_template("responserev.html", projects=projects.setup())
 

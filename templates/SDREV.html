@@ -60,8 +60,7 @@ body {
 <div class="row">
     <div class=".rightcolumn">
         <div class="card">
-            <h2></h2>
-            <h5> Harney Sushi</h5>
+            <h2>Harney Sushi</h2>
             <div class="fakeimg" style="height:200px;">Image</div>
             <div id="tab-one" class="tab-content show">
                 <table class="cuisine">
@@ -69,7 +68,7 @@ body {
                         <th>Harney Sushi</th>
                         <th>Review</th>
                     </tr>
-                    {% for cuisine in cuisines  %}
+                    {% for Harney_Sushi in cuisines  %}
                     <tr>
                         <td>{{cuisine.Harney_Sushi}}</td>
                         <td>{{cuisine.Harney_Sushi.reviews}}</td>
@@ -77,11 +76,11 @@ body {
                     {%  endfor %}
                 </table>
             </div>
-            <h5>Restaurant 2</h5>
+            <h2>Restaurant 2</h2>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Rate Table Goes Here</p>
             <p>REVIEWS GO HERE IN A TABLE</p>
-            <h5>Restaurant 3</h5>
+            <h2>Restaurant 3</h2>
             <div class="fakeimg" style="height:200px;">Image</div>
             <p>Rate Table Goes Here</p>
             <p>REVIEWS GO HERE IN A TABLE</p>
