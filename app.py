@@ -229,9 +229,10 @@ from login import validate
 import requests
 from view import updatepwd, delete
 
+
 @app.route('/login/')
 def login():
-    return flask_render_template("login.html")
+    return flask.render_template("login.html")
 
 
 @app.route('/signup/')
