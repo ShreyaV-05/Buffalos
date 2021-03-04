@@ -1,49 +1,71 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/css/login.css">
+</head>
+<body>
 
-{% extends "base.html" %}
+<div class="container">
 
-{% block content %}
-<style>
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    <div class="element">
+        <div class="login">
+            <script src="script.js"></script>
+            <center>
+                <h3>Login Here</h3>
+                <h1> {{ error }} </h1>
+                <form action="/checkuser/" method="post">
+                    <table>
+                        <tr>
+                            <td>Username:</td>
+                            <td>
+                                <input  type="text"  name="user_name">
+                            </td>
+                        </tr>
 
-        td, th {
-            border: 1px solid # #464C4C;
-            text-align: left;
-            padding: 8px;
-        }
+                        <tr>
+                            <td>Password:</td>
+                            <td>
+                                <input  type="password" name="user_pswd">
+                            </td>
+                        </tr>
 
-        tr:nth-child(even) {
-            background-color:  #464C4C;
-        }
+                        <tr>
+                            <td>
+                                <input type="submit" value="Login" />
+                            </td>
 
-        th{
-        color: black;
-        }
-
-        h1{
-        color: black;
-        }
-    </style>
-
-<h1>Login</h1>
-<div class="row courses-buttons justify-content-center">
-    <form action={{url_for('.login')}} method="post">
-        <table border="0">
-            <tr><th>Username</th></tr>
-            <tr><td><input name="txtUsername" type="text" size="20"></td></tr>
-            <tr><th>Password</th></tr>
-            <tr><td><input name="txtPwd1" type="password" size="20"></td></tr>
-            <tr><th>Email</th></tr>
-            <tr><td><input name="txtEmail" type="text" size="20"></td></tr>
-            <tr><td><input type="submit" value="Submit"></td></tr>
-            <tr><td><a href={{url_for('.signup')}}>Sign Up</a></td></tr>
-        </table>
-    </form>
+                            <td>
+                                <input type="button" onclick="window.location.href='/registration';" value="Register" />
+                            </td>
+                        </tr>
+                        <table>
+                            <center>
+        </div>
+    </div>
 </div>
 
-{% endblock %}
+</body>
+
+<script src="https://threejs.org/build/three.js"></script>
+<script src="{{ url_for('static', filename='vanta.cells.min.js') }}"></script>
+<script>
+    VANTA.CELLS({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 750.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      color1: 0x7071d,
+      color2: 0x3032f,
+      size: 1.20,
+      speed: 3.30
+    })
+</script>
+
+
+
+</html>
