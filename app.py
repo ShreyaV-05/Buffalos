@@ -221,9 +221,33 @@ def soon_route():
         records.append(user_dict)  # adding a new item to the table
     return render_template("coming_soon.html", form=form, table=records)
 
+@app.route('/login/')
+def login():
+    return flask_render_template("login.html")
+
+
+@app.route('/signup/')
+def signup():
+    return flask.render_template("auth_user.html")
+
+@app.route('/signup', methods=['POST'])
+def signup(): return newuser(request)
+
+
+@app.route('/checkuser', methods=['POST'])
+def checkuser(): return validate(request)
+
+@app.route('/changepwd', methods=['POST'])
+def changepwd():
+    return flask.render_template("profile.html", error=updatepswd(request))
+
+@app.route('/deleteAccount', methods=['POST'])
+def deleteAccount():
+    return flask.render_template("profile.html", error=delete(request))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=' 5006', host='127.0.0.1')
+© 2021 GitHub, Inc.
 
 
 
