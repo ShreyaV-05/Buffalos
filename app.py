@@ -104,6 +104,12 @@ def showboard():
     return render_template("dashBoard.html", projects=projects.setup())
 
 
+
+@app.route('/tictactoe/')
+def tictactoe_route():
+    return render_template("tictactoe.html", projects=projects.setup())
+
+
 # For Random Cuisine Generator
 @app.route('/random/', methods=['GET', 'POST'])
 def random():
