@@ -236,7 +236,7 @@ def login():
 
 
 @app.route('/signup/')
-def signup():
+def auth_user():
     return flask.render_template("auth_user.html")
 
 @app.route('/signup', methods=['POST'])
