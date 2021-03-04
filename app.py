@@ -221,6 +221,14 @@ def soon_route():
         records.append(user_dict)  # adding a new item to the table
     return render_template("coming_soon.html", form=form, table=records)
 
+import data
+import flask
+from flask import request, redirect
+from auth_user import newuser
+from login import validate
+import requests
+from view import updatepwd, delete
+
 @app.route('/login/')
 def login():
     return flask_render_template("login.html")
