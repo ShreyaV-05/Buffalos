@@ -221,13 +221,13 @@ def soon_route():
         records.append(user_dict)  # adding a new item to the table
     return render_template("coming_soon.html", form=form, table=records)
 
-import data
+
 import flask
 from flask import request, redirect
 from auth_user import newuser
 from login import validate
 import requests
-from view import updatepwd, delete
+from view import updatepswd, delete
 
 
 @app.route('/login/')
@@ -256,7 +256,7 @@ def deleteAccount():
 
 if __name__ == "__main__":
     app.run(debug=True, port=' 5006', host='127.0.0.1')
-© 2021 GitHub, Inc.
+
 
 
 

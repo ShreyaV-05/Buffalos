@@ -63,8 +63,8 @@ def checkLogin(request):
     conn.close()
 
     return 1
-"""
-def updatepwd(request):
+
+def updatepswd(request):
 
     if checkLogin(request) == 1:
         user = request.form['user)name']
@@ -100,4 +100,3 @@ def delete(request):
 
     else:
         return "Username or Password Incorrect"
-"""
