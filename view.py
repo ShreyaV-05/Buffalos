@@ -35,7 +35,7 @@ def getData():
 
 
 def checkLogin(request):
-    user = request.form['user']
+    user = request.form['user_name']
     password = request.form['user_pswd']
     print("Username" + "\t" + user + "\t" + "Password" + "\t" + password)
     conn = sqlite3.connect('user.db')

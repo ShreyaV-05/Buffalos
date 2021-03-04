@@ -6,7 +6,7 @@ from wtforms.validators import InputRequired, Email, Length
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
-
+import view
 import requests
 from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
@@ -97,15 +97,6 @@ def rating_route():
 def easteregg_route():
     return render_template("easteregg.html", projects=projects.setup())
 
-
-@app.route('/login/')
-def login():
-    return render_template("login.html")
-
-
-@app.route('/auth_user/')
-def signup():
-    return render_template("auth_user.html")
 
 
 @app.route('/dashboard/')
@@ -225,13 +216,24 @@ def soon_route():
 import flask
 from flask import request, redirect
 from auth_user import newuser
-from login import validate
 import requests
-from view import updatepswd, delete
+from view import updatepswd, delete,checkLogin
 
+username = "Shreya"
+password = "FoodYum"
 
-@app.route('/login/')
+@app.route('/login/', methods = ["GET","POST"])
 def login():
+    if request.method == 'POST':
+        form_username = request.form['user_name']
+        form_password = request.form['user_pswd']
+        if form_username == "Shreya":
+            if form_password == "FoodYum":
+                return render_template("sandiego.html")
+        else:
+            return '<h1>Invalid username or password</h1>'
+
+
     return flask.render_template("login.html")
 
 
@@ -243,8 +245,7 @@ def auth_user():
 def signup(): return newuser(request)
 
 
-@app.route('/checkuser', methods=['POST'])
-def checkuser(): return validate(request)
+
 
 @app.route('/changepwd', methods=['POST'])
 def changepwd():
@@ -255,7 +256,7 @@ def deleteAccount():
     return flask.render_template("profile.html", error=delete(request))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=' 5006', host='127.0.0.1')
+    app.run(debug=True, port=' 8080', host='127.0.0.1')
 
 
 
