@@ -12,6 +12,7 @@ from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'AnimeisGOOD'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -51,6 +52,17 @@ def __init__(self, location, restaurant, cuisine, price):
     self.cuisine = cuisine
     self.price = price
 
+class reviewed(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    cuisine = db.Column(db.String(100))
+    review = db.Column(db.String(50))
+
+    # constructor that initializes the database
+    def __init__(self, cuisine, review):
+        self.cuisine = cuisine
+        self.review = review
+
+
 
 "Create Database"
 db.create_all()  # creates food.db file
@@ -85,6 +97,18 @@ def sanfrancisco_route():
 
 @app.route("/responserev/", methods=['GET', 'POST'])
 def responserev_route():
+    if request.method == 'POST':
+        cuisine= request.form['cuisine']
+        review = request.form['review']
+
+
+        #  adding user into the all_user database
+        new_review = reviewed(cuisine = cuisine,review = review)
+        db.session.add(new_review)
+        db.session.commit()
+
+        return render_template("responserev.html", projects=projects.setup())
+
     return render_template("responserev.html", projects=projects.setup())
 
 
@@ -263,10 +287,3 @@ def deleteAccount():
 
 if __name__ == "__main__":
     app.run(debug=True, port=' 8080', host='127.0.0.1')
-
-
-
-
-
-
-
