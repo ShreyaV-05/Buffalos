@@ -2,14 +2,19 @@
 {% extends 'base.html' %}
 
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% block style00 %}
     <style>
-        body {background-color:powderblue ;}
-         /* Three columns side by side */
+            *
+            body {
+                color:#389F60;
+            }
+            body{
+                background-color:powderblue ;
+            }
+            /* Three columns side by side */
         .column {
           float: left;
           width: 33.33%;
@@ -74,9 +79,9 @@
 <body style="width: revert">
 
 <div class="header">
-    <h2 style="color:#FA9315;text-align:left">{{location}} Reviews</h2>
+    <h2 style="color:#7AD530;text-align:left">{{location}} Reviews</h2>
 </div>
-<img src="{{image}}" style="size:100% 300px; position:left;">
+<img src="{{image}}" style="size:100% 600px; position:left;">
 <!--<p>{{reviews_table}}</p>-->
 <div class="row">
     {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
@@ -87,8 +92,8 @@
     <div class="column">
         <div class="card">
             <div class="container">
-                <h2 style="color:#F9C356;">{{cuisine}}</h2>
-                <p sytle="color:#C5FA15;">{{review}}</p>
+                <h2 style="color:#53AC01;">{{cuisine}}</h2>
+                <p sytle="color:#89F60;">{{review}}</p>
             </div>
         </div>
     </div>
