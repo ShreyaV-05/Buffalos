@@ -1,95 +1,107 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-* {
-  box-sizing: border-box;
-}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
+    {% block style00 %}
+    <style>
+            *
+            body {
+                color:#FEB934;
+            }
+            body{
+                background-color:powderblue ;
+            }
+            /* Three columns side by side */
+        .column {
+          float: left;
+          width: 33.33%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
+        /* Display the columns below each other instead of side by side on small screens */
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
 
+        /* Add some shadows to create a card effect */
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 75%;
-  padding-left: 20px;
-}
+        /* Some left and right padding inside the container */
+        .container {
+          padding: 0 16px;
+        }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+        /* Clear floats */
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
 
+        .title {
+          color: grey;
+        }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
 
+        .button:hover {
+          background-color: #555;
+        }
 
-}
-</style>
-    </head>
-<body>
+        .mid{
+            margin:auto;
+            text-align:center;
+        }
+
+        </style>
+    {% endblock %}
+</head>
+{% block content %}
+<body style="width: revert">
 
 <div class="header">
-    <h2>San Diego Reviews</h2>
+    <h2 style="color:#FA9315;text-align:left">{{location}} Reviews</h2>
 </div>
-
+<img src="{{image}}" style="size:100% 300px; position:left;">
+<!--<p>{{reviews_table}}</p>-->
 <div class="row">
-    <div class=".rightcolumn">
+    {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
+    {% set cuisine = review["cuisine"] %}
+    {% set review = review["review"] %}
+    <!--<p>{{cuisine}}</p>
+    <p>{{review}}</p>-->
+    <div class="column">
         <div class="card">
-            <h2>Harney Sushi</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <div id="tab-one" class="tab-content show">
-                <table class="cuisine">
-                    <tr>
-                        <th>Harney Sushi</th>
-                        <th>Review</th>
-                    </tr>
-                    {% for Harney_Sushi in cuisines  %}
-                    <tr>
-                        <td>{{cuisine.Harney_Sushi}}</td>
-                        <td>{{cuisine.Harney_Sushi.reviews}}</td>
-                    </tr>
-                    {%  endfor %}
-                </table>
+            <div class="container">
+                <h2 style="color:#F9C356;">{{cuisine}}</h2>
+                <p sytle="color:#C5FA15;">{{review}}</p>
             </div>
-            <h2>Restaurant 2</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Rate Table Goes Here</p>
-            <p>REVIEWS GO HERE IN A TABLE</p>
-            <h2>Restaurant 3</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Rate Table Goes Here</p>
-            <p>REVIEWS GO HERE IN A TABLE</p>
-
         </div>
     </div>
+    {% endfor %}
+</div>
 </div>
 </body>
-</head>
+{% endblock %}
 
 
 </html>
