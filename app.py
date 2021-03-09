@@ -12,7 +12,7 @@ from flask import render_template, request, redirect, url_for
 from flask_table import Table, Col
 from sqlalchemy import func
 
-
+"""
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'AnimeisGOOD'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
@@ -22,7 +22,7 @@ Bootstrap(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
-
+"""
 
 
 
@@ -111,10 +111,20 @@ def responserev_route():
 
     return render_template("responserev.html", projects=projects.setup())
 
+sd_rev = []
 
+def review_map():  # mapping the front end to the backend, put in the function so we don't have to copy and paste
+    database = reviewed.query.all()
+    for review in database:
+        review_dict = {'id': review.id, 'cuisine': review.cuisine, 'review': review.review}
+        sd_rev.append(review_dict)
+review_map()
+print('reviews in database:')
+print(sd_rev)
+#this is where reviews end up
 @app.route("/SDREV/")
 def rating_route():
-    return render_template("SDREV.html", projects=projects.setup())
+    return render_template("SDREV.html", projects=projects.setup(), reviews_table=sd_rev)
 
 
 @app.route("/easteregg/")
@@ -286,4 +296,4 @@ def deleteAccount():
     return flask.render_template("profile.html", error=delete(request))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=' 8080', host='127.0.0.1')
+    app.run(debug=True, port=' 5001', host='127.0.0.1')

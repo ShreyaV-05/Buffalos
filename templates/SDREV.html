@@ -3,93 +3,32 @@
 
     <html>
     <head>
+        <title> hi:)</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% block style00 %}
         <style>
-* {
-  box-sizing: border-box;
-}
+            * {
+                color: black;
+            }
 
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
-
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 75%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-}
-</style>
+            body {
+                color:black;
+            }
+        </style>
+        {% endblock %}
     </head>
-<body>
+    {% block content %}
+<body style="background-color: black;">
 
-<div class="header">
-    <h2>San Diego Reviews</h2>
-</div>
-
-<div class="row">
-    <div class=".rightcolumn">
-        <div class="card">
-            <h2>Harney Sushi</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <div id="tab-one" class="tab-content show">
-                <table class="cuisine">
-                    <tr>
-                        <th>Harney Sushi</th>
-                        <th>Review</th>
-                    </tr>
-                    {% for Harney_Sushi in cuisines  %}
-                    <tr>
-                        <td>{{cuisine.Harney_Sushi}}</td>
-                        <td>{{cuisine.Harney_Sushi.reviews}}</td>
-                    </tr>
-                    {%  endfor %}
-                </table>
-            </div>
-            <h2>Restaurant 2</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Rate Table Goes Here</p>
-            <p>REVIEWS GO HERE IN A TABLE</p>
-            <h2>Restaurant 3</h2>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Rate Table Goes Here</p>
-            <p>REVIEWS GO HERE IN A TABLE</p>
-
-        </div>
+    <div class="header">
+        <h2>San Diego Reviews</h2>
     </div>
-</div>
+    <p>{{reviews_table}}</p>
+
+    </div>
 </body>
-</head>
+{% endblock %}
 
 
 </html>
