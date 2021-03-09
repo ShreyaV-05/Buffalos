@@ -4,9 +4,9 @@ from flask import redirect, render_template
 
 
 def newuser(request):
-    user = request.form['user_name']
-    password = request.form['user_pswd']
-    mail = request.form['user_email']
+    user = request.form['user']
+    password = request.form['user_pass']
+    mail = request.form['mail']
     print("Username" + "\t" + user + "\t" + "Password" + "\t" + password + "\t" + "Email" + "\t" + mail)
     userinfo = [user, password, mail]
     conn = sqlite3.connect('user.db')
@@ -22,6 +22,6 @@ def newuser(request):
         conn.close()
     except:
         print("duplicate userid or email")
-        return render_template("auth_user.html", error='UserId or email already in use')
+        return render_template("registration.html", error='UserId or email already in use')
     else:
         return redirect('/')

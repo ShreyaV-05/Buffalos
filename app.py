@@ -284,47 +284,40 @@ def soon_route():
     return render_template("coming_soon.html", form=form, table=records)
 
 
+
 import flask
 from flask import request, redirect
-from auth_user import newuser
+from register import newuser
+from login import validate
 import requests
-from view import updatepswd, delete,checkLogin
 
-username = "Shreya"
-password = "FoodYum"
+from view import updatepwd, delete
 
-@app.route('/login/', methods = ["GET","POST"])
+
+
+@app.route('/login')
 def login():
-    if request.method == 'POST':
-        form_username = request.form['user_name']
-        form_password = request.form['user_pswd']
-        if form_username == "Shreya":
-            if form_password == "FoodYum":
-                return render_template("sandiego.html")
-        else:
-            return '<h1>Invalid username or password</h1>'
-
-
     return flask.render_template("login.html")
 
 
-@app.route('/signup/')
-def auth_user():
-    return flask.render_template("auth_user.html")
+@app.route('/registration')
+def registration():
+    print("I am in registraeldskfl")
+    return flask.render_template("registration.html")
 
 @app.route('/signup', methods=['POST'])
 def signup(): return newuser(request)
 
-
-
+@app.route('/checkuser', methods=['POST'])
+def checkuser(): return validate(request)
 
 @app.route('/changepwd', methods=['POST'])
 def changepwd():
-    return flask.render_template("profile.html", error=updatepswd(request))
+    return flask.render_template("profile.html", error=updatepwd(request))
 
 @app.route('/deleteAccount', methods=['POST'])
 def deleteAccount():
     return flask.render_template("profile.html", error=delete(request))
 
-if __name__ == "__main__":
-    app.run(debug=True, port=' 5002', host='127.0.0.1')
+
+

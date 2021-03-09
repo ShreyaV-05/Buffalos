@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
     <style>
+        body, html {
+            height: 100%;
+        }
+
         .container{
             position:relative;
             width:90vw;
@@ -16,7 +20,7 @@
             position:absolute;
             top: 0; bottom: 0; left: 0; right: 0;
             margin: auto;
-            background: light blue;
+            background: orange;
             width: 50vw; height: 70vh;
             vertical-align: middle;
         }
@@ -69,7 +73,11 @@
         body{
             height: 100vh;
             display:flex;
-            background: azure;
+            background-image: url(../static/dnhs.jpg);
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         h1{
@@ -91,27 +99,28 @@
             <script src="script.js"></script>
             <center>
                 <h3>Sign Up</h3>
+                <h1> {{ error }} </h1>
 
                 <form action="/signup" method="post">
                     <table>
                         <tr>
                             <td>Username:</td>
                             <td>
-                                <input  type="text"  name="user_name">
+                                <input  type="text"  name="user">
                             </td>
                         </tr>
 
                         <tr>
                             <td>Password:</td>
                             <td>
-                                <input  type="password" name="user_pswd">
+                                <input  type="password" name="user_pass">
                             </td>
                         </tr>
 
                         <tr>
                             <td>Email:</td>
                             <td>
-                                <input  type="email" name="user_email">
+                                <input  type="email" name="mail">
                             </td>
                         </tr>
 
@@ -129,27 +138,5 @@
         </div>
     </div>
 </div>
-
 </body>
-
-<script src="https://threejs.org/build/three.js"></script>
-<script src="{{ url_for('static', filename='vanta.cells.min.js') }}"></script>
-<script>
-    VANTA.CELLS({
-        el: "body",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 750.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        color1: 0x7071d,
-        color2: 0x3032f,
-        size: 1.20,
-        speed: 3.30
-    })
-</script>
-
-
-
 </html>
