@@ -54,6 +54,7 @@ endblock
         <th>{{ row['restaurant'] }}</th>
         <th>{{ row['location'] }}</th>
         <th>{{ row['price'] }}</th>
+        <th><form action={{url_for('.delete')}} method="post"><input id="cuisine_id" name="item_id" value={{row['cuisine']}} style="visibility: hidden; width: 0px;"><input type="submit" value="Delete"></form></th>
     </tr>
     {% endfor %}
 </table>
