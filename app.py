@@ -55,12 +55,14 @@ def __init__(self, location, restaurant, cuisine, price):
 class reviewed(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     cuisine = db.Column(db.String(100))
-    review = db.Column(db.String(50))
+    review = db.Column(db.String(500))
+    location = db.Column(db.String(10))
 
     # constructor that initializes the database
-    def __init__(self, cuisine, review):
+    def __init__(self, cuisine, review, location):
         self.cuisine = cuisine
         self.review = review
+        self.location = location
 
 
 
@@ -111,19 +113,37 @@ def responserev_route():
 
     return render_template("responserev.html", projects=projects.setup())
 
+rate_rev = []
 sd_rev = []
 
 def review_map():  # mapping the front end to the backend, put in the function so we don't have to copy and paste
     database = reviewed.query.all()
     for review in database:
-        review_dict = {'id': review.id, 'cuisine': review.cuisine, 'review': review.review}
-        sd_rev.append(review_dict)
+        review_dict = {'id': review.id, 'cuisine': review.cuisine, 'review': review.review, 'location':review.location}
+        rate_rev.append(review_dict)
+
+        #getting the value that corresponds with the key 'location'
+        location = review_dict['location']
+
+        #if it is SD
+        if location == 'SD':
+            #append to sd_review
+            sd_rev.append(review_dict)
+
 review_map()
 print('reviews in database:')
+print(rate_rev)
+print('sd_review')
 print(sd_rev)
 #this is where reviews end up
 @app.route("/SDREV/")
 def rating_route():
+    """sd_list = db.session.query(reviewed).filter_by(location='SD')
+    sd_review = []
+    for i in sd_list:
+        sd_review.append(sd_list)
+    print('sd_review')
+    print(sd_review)"""
     return render_template("SDREV.html", projects=projects.setup(), reviews_table=sd_rev)
 
 
@@ -296,4 +316,4 @@ def deleteAccount():
     return flask.render_template("profile.html", error=delete(request))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=' 5001', host='127.0.0.1')
+    app.run(debug=True, port=' 5002', host='127.0.0.1')

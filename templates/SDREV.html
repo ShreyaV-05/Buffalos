@@ -24,7 +24,14 @@
     <div class="header">
         <h2>San Diego Reviews</h2>
     </div>
-    <p>{{reviews_table}}</p>
+    <!--<p>{{reviews_table}}</p>-->
+
+    {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
+    {% set cuisine = review["cuisine"] %}
+    {% set review = review["review"] %}
+<p>{{cuisine}}</p>
+    <p>{{review}}</p>
+        {% endfor %}
 
     </div>
 </body>
