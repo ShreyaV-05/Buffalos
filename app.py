@@ -115,7 +115,7 @@ def responserev_route():
 
 rate_rev = []
 sd_rev = []
-
+sf_rev = []
 def review_map():  # mapping the front end to the backend, put in the function so we don't have to copy and paste
     database = reviewed.query.all()
     for review in database:
@@ -130,6 +130,10 @@ def review_map():  # mapping the front end to the backend, put in the function s
             #append to sd_review
             sd_rev.append(review_dict)
 
+        if location == 'SF':
+            #append to sd_review
+            sf_rev.append(review_dict)
+
 review_map()
 print('reviews in database:')
 print(rate_rev)
@@ -138,14 +142,11 @@ print(sd_rev)
 #this is where reviews end up
 @app.route("/SDREV/")
 def rating_route():
-    """sd_list = db.session.query(reviewed).filter_by(location='SD')
-    sd_review = []
-    for i in sd_list:
-        sd_review.append(sd_list)
-    print('sd_review')
-    print(sd_review)"""
-    return render_template("SDREV.html", projects=projects.setup(), reviews_table=sd_rev)
+    return render_template("SDREV.html", projects=projects.setup(), reviews_table=sd_rev, location='San Diego', image='https://i0.wp.com/hollywoodsign.org/wp-content/uploads/2018/05/HS_HeaderPhoto2.jpg?fit=1500%2C642&ssl=1')
 
+@app.route("/SFREV/")
+def rating_route_1():
+    return render_template("SDREV.html", projects=projects.setup(), reviews_table=sf_rev, location='San Fran')
 
 @app.route("/easteregg/")
 def easteregg_route():

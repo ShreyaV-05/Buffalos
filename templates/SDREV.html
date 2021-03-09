@@ -80,8 +80,9 @@
 <body style="width: revert">
 
     <div class="header">
-        <h2>San Diego Reviews</h2>
+        <h2>{{location}} Reviews</h2>
     </div>
+    <iframe src="{{image}}"></iframe>
     <!--<p>{{reviews_table}}</p>-->
     <div class="row">
     {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
@@ -89,13 +90,11 @@
     {% set review = review["review"] %}
     <!--<p>{{cuisine}}</p>
     <p>{{review}}</p>-->
-
         <div class="column">
             <div class="card">
                 <div class="container">
                     <h2>{{cuisine}}</h2>
                     <p sytle="color:black;">{{review}}</p>
-
                 </div>
             </div>
         </div>
