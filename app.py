@@ -4,13 +4,11 @@ from flask_wtf import FlaskForm
 from wtforms import Form, BooleanField, StringField, PasswordField
 from wtforms.validators import InputRequired, Email, Length
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import projects
-import view
+
 import requests
 from flask import render_template, request, redirect, url_for
-from flask_table import Table, Col
-from sqlalchemy import func
+
 
 """
 app = Flask(__name__)
@@ -301,42 +299,6 @@ def delete():
     else:
         print("could not find the value")
     return redirect(url_for('soon_route'))
-
-
-
-import flask
-from flask import request, redirect
-from register import newuser
-from login import validate
-import requests
-
-from view import updatepwd, delete
-
-
-
-@app.route('/login')
-def login():
-    return flask.render_template("login.html")
-
-
-@app.route('/registration')
-def registration():
-    print("I am in registraeldskfl")
-    return flask.render_template("registration.html")
-
-@app.route('/signup', methods=['POST'])
-def signup(): return newuser(request)
-
-@app.route('/checkuser', methods=['POST'])
-def checkuser(): return validate(request)
-
-@app.route('/changepwd', methods=['POST'])
-def changepwd():
-    return flask.render_template("profile.html", error=updatepwd(request))
-
-@app.route('/deleteAccount', methods=['POST'])
-def deleteAccount():
-    return flask.render_template("profile.html", error=delete(request))
 
 
 if __name__ == "__main__":
