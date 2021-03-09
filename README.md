@@ -41,7 +41,7 @@ Our current web pages on the running site include:
 | -------- | ----------- |
 |Andrea| |
 |Diane| Raspberry Pi/deployment (site deployed and running), Tic-Tac-Toe that leads to easter egg, drop-down menu, web page design (LA, SF, Easter Egg, Home)|
-|Shreya| |
+|Shreya|Database, Review Form, Review Pages for SD, LA,SF restaurants, LA Restaurant page |
 
 
 ## Authors
