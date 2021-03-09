@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
-    <html>
-    <head>
-        <title> hi:)</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+    <title> hi:)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        {% block style00 %}
-        <style>
+    {% block style00 %}
+    <style>
             * {
                 color: black;
             }
@@ -74,33 +74,33 @@
         }
 
         </style>
-        {% endblock %}
-    </head>
-    {% block content %}
+    {% endblock %}
+</head>
+{% block content %}
 <body style="width: revert">
 
-    <div class="header">
-        <h2>{{location}} Reviews</h2>
-    </div>
-    <iframe src="{{image}}"></iframe>
-    <!--<p>{{reviews_table}}</p>-->
-    <div class="row">
+<div class="header">
+    <h2>{{location}} Reviews</h2>
+</div>
+<iframe src="{{image}}"></iframe>
+<!--<p>{{reviews_table}}</p>-->
+<div class="row">
     {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
     {% set cuisine = review["cuisine"] %}
     {% set review = review["review"] %}
     <!--<p>{{cuisine}}</p>
     <p>{{review}}</p>-->
-        <div class="column">
-            <div class="card">
-                <div class="container">
-                    <h2>{{cuisine}}</h2>
-                    <p sytle="color:black;">{{review}}</p>
-                </div>
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2>{{cuisine}}</h2>
+                <p sytle="color:black;">{{review}}</p>
             </div>
         </div>
-        {% endfor %}
     </div>
-    </div>
+    {% endfor %}
+</div>
+</div>
 </body>
 {% endblock %}
 
