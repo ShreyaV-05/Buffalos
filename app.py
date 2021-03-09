@@ -282,6 +282,25 @@ def soon_route():
                      'price': new_food.price}
         records.append(user_dict)  # adding a new item to the table
     return render_template("coming_soon.html", form=form, table=records)
+@app.route('/delete/', methods=['GET', "POST"])
+def delete():
+    # print("arrived to delete")  # for debugging in the terminal
+    if request.method == "POST":  # we know the item id
+        cuisine_id = request.form["item_id"] #retrieving the value of the cuisine name
+        for dictionary in records:  # deleteing items from the data base
+            if (dictionary["cuisine"] == cuisine_id):
+                # print("we found it")  # for debugging in the terminal
+                delete = Cuisines.query.filter_by(cuisine=cuisine_id).first()
+                db.session.delete(delete)
+                db.session.commit()
+                #print("after delete")  # for debuggin in the terminal
+            for i in range(len(records)):  # deleting the front end view of the data base
+                if records[i]['cuisine'] == cuisine_id:
+                    del records[i]
+                    break
+    else:
+        print("could not find the value")
+    return redirect(url_for('soon_route'))
 
 
 
@@ -320,4 +339,5 @@ def deleteAccount():
     return flask.render_template("profile.html", error=delete(request))
 
 
-
+if __name__ == "__main__":
+    app.run(debug=True, port=' 5002', host='127.0.0.1')
