@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block style00 %}
+    <style>
+            *
+            body {
+                color:#01AC78;
+            }
+            body{
+                background-color:powderblue ;
+            }
+            /* Three columns side by side */
+        .column {
+          float: left;
+          width: 33.33%;
+          margin-bottom: 16px;
+          padding: 0 8px;
+        }
+
+        /* Display the columns below each other instead of side by side on small screens */
+        @media screen and (max-width: 650px) {
+          .column {
+            width: 100%;
+            display: block;
+          }
+        }
+
+        /* Add some shadows to create a card effect */
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Some left and right padding inside the container */
+        .container {
+          padding: 0 16px;
+        }
+
+        /* Clear floats */
+        .container::after, .row::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+
+        .title {
+          color: grey;
+        }
+
+        .button {
+          border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+        }
+
+        .button:hover {
+          background-color: #555;
+        }
+
+        .mid{
+            margin:auto;
+            text-align:center;
+        }
+
+        </style>
+    {% endblock %}
+</head>
+{% block content %}
+<body style="width: revert">
+
+<div class="header">
+    <h2 style="color:#0122AC;text-align:left">{{location}} Reviews</h2>
+</div>
+<img src="{{image}}" style="size:100% 600px; position:left;">
+<!--<p>{{reviews_table}}</p>-->
+<div class="row">
+    {% for review in reviews_table %} <!-- Looping through each dictionary in the list-->
+    {% set cuisine = review["cuisine"] %}
+    {% set review = review["review"] %}
+    <!--<p>{{cuisine}}</p>
+    <p>{{review}}</p>-->
+    <div class="column">
+        <div class="card">
+            <div class="container">
+                <h2 style="color:#016BAC;">{{cuisine}}</h2>
+                <p sytle="color:#01AC78;">{{review}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+</body>
+{% endblock %}
+
+
+</html>
