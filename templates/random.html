@@ -42,41 +42,45 @@
 
 
 <body style="background-color: #496EA1;">
-<!-- linear-gradient(to bottom, #92B56A, #DBF1C3);"   (original background in case I want to go back to it)-->
 
 <!-- Navigation Bar from Bootstrap -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">{{name}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div>
+    <div style="background-color:powderblue;color:white;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">{{name}}</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
-        <ul class="navbar-nav">
-            <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href= "/login/">Login</a>
-            <a class="nav-link" href= "/signup/">Signup</a>
-            <a class="nav-link" href= "/LA/">Restaurants</a>
-            <a class="nav-link" href= "/dashboard/">Dashboard</a>
-            <a class="nav-link" href="/sandiego/">San Diego</a>
-            <a class="nav-link" href="/losangeles/">Los Angeles</a>
-            <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
-            <a class="nav-link" href="/responserev/">Response Form</a>
-            <a class="nav-link" href="/recommend/">Recommend</a>
-            <a class="nav-link" href="/random/">Pick For Me!</a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Restaurants
-                </a>
-                <div class="dropdown-menu" style="position: absolute; z-index: 2;">
-                    <a class="nav-link" href="/sandiego/">San Diego</a>
-                    <a class="nav-link" href="/losangeles/">Los Angeles</a>
-                    <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+                <ul class="navbar-nav">
+                    <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/responserev/">Review Form</a>
+                    <a class="nav-link" href="/soon/">Coming Soon</a>
+                    <a class="nav-link" href="/random/">Pick For Me!</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Restaurants
+                        </a>
+                        <div class="dropdown-menu" style="position: absolute; z-index: 2; background-color: black;">
+                            <a class="nav-link" href="/sandiego/">San Diego</a>
+                            <a class="nav-link" href="/SDREV/">San Diego Review</a>
+                            <a class="nav-link" href="/losangeles/">Los Angeles</a>
+                            <a class="nav-link" href="/LAREV/">Los Angeles Review</a>
+                            <a class="nav-link" href="/sanfrancisco/">San Francisco</a>
+                            <a class="nav-link" href="/SFREV/">San Francisco Review</a>
+
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../static/bootstrap.bundle.min.js"></script>
+        <div class="container-fluid" style="position: relative; z-index: 1;">
+        </div>
 
 <!-- Page Header -->
 <h2>Pick for me!</h2>
@@ -93,13 +97,9 @@
 
 
 
-
-
-
-
 <!-- Table that coordinates to generated number -->
 <table class="center" style="width:75%">
-    <caption>...now find the cuisine that matches your number and desired location!</caption>
+    <caption style="color:white;">...now find the cuisine that matches your number and desired location!</caption>
     <tr id="t01">
         <th>Number</th>
         <th>San Diego Cuisine</th>
@@ -126,15 +126,21 @@
     </tr>
     <tr>
         <td>4</td>
-        <td>Pending</td>
-        <td>Sugar Fish</td>
+        <td>Din Tai Fung</td>
+        <td>Palermo</td>
         <td>Miki Restaurant</td>
     </tr>
     <tr>
         <td>5</td>
-        <td>Pending</td>
+        <td>Bencotto Italian Kitchen</td>
         <td>Yang Chow</td>
-        <td>Pending</td>
+        <td>Barzotto</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>La Puerta</td>
+        <td>The Mexican Village</td>
+        <td>Nopalito</td>
     </tr>
 </table>
 
