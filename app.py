@@ -100,10 +100,11 @@ def responserev_route():
     if request.method == 'POST':
         cuisine= request.form['cuisine']
         review = request.form['review']
+        location = request.form['location']
 
 
         #  adding user into the all_user database
-        new_review = reviewed(cuisine = cuisine,review = review)
+        new_review = reviewed(cuisine = cuisine,review = review, location = location)
         db.session.add(new_review)
         db.session.commit()
 
