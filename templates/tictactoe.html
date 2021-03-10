@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 
-{% extends "base.html" %}
-
-{% block content %}
-
-<h1 style="color: #000000; position:relative;left:100px;">BLIND TIC-TAC-TOE:</h1>
+<h1 style="color: #000000; position:relative;left:100px;">TIC-TAC-TOE:</h1>
 <h2 style="color: #000000; position:relative;left:100px;">difficulty - insane.</h2>
 <html>
 <head>
@@ -19,7 +15,7 @@
 
             *{box-sizing: border-box}
 
-            .container{width: 329.99px;
+            .container{width: 300px;
                        overflow: hidden;
                        margin: 50px auto 0 auto;
                      }
@@ -68,7 +64,7 @@
 <body>
 
 <div class="container" id="main">
-    <span id="turn">Play</span>
+    <span id="turn">Easter Bunny challenges you to a game....</span>
     <!-- show X or O on div click -->
     <div class="box" id="box1"></div>
     <div class="box" id="box2"></div>
@@ -178,4 +174,3 @@
 
 </body>
 </html>
-{% endblock %}
