@@ -6,7 +6,7 @@ Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 ## Website Summary
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
 There will be different restuarants information avaliable on each page sorted by location all falling under different cuisines.
-# Big Ticket Ideas with Visuals/Planned concepts for our page
+# Original Plans for Website
 * 3 tabs separated by place (SF, LA, SD)
 * has about 6 restaurants each
 * address embed to google maps
@@ -28,7 +28,7 @@ Tabs:
 * reviews form
 
 
-# Current Pages
+# Current Pages in our website
 Our current web pages on the running site include:
 * Home
 * Restaurant pages and their respective reviews page
@@ -36,18 +36,19 @@ Our current web pages on the running site include:
 * coming soon
 * reviews form
 * easter egg/blind tic-tac-toe
-# Technicals
+# Technicals achieved
 | Author| Contributions/Technicals |
 | -------- | ----------- |
-|Andrea| |
+|Andrea| CRUD database (coming soon page), rest/web api (pick for me! tab), San Diego Restaurant page |
 |Diane| Raspberry Pi/deployment (site deployed and running), Tic-Tac-Toe that leads to easter egg, drop-down menu, web page design (LA, SF, Easter Egg, Home)|
-|Shreya|Database, Review Form, Review Pages for SD, LA,SF restaurants, LA Restaurant page |
+|Shreya| Database, Review Form, Review Pages for SD, LA,SF restaurants, LA Restaurant page |
 
 
 ## Authors
 * Andrea Abed
 * Diane Tang
 * Shreya Vasant
+* 
 ## Links
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
