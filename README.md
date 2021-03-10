@@ -41,7 +41,7 @@ Our current web pages on the running site include:
 | -------- | ----------- |
 |Andrea| CRUD database (coming soon page), rest/web api (pick for me! tab), San Diego Restaurant page |
 |Diane| Raspberry Pi/deployment (site deployed and running), Tic-Tac-Toe that leads to easter egg, drop-down menu, web page design (LA, SF, Easter Egg, Home)|
-|Shreya| Database, Review Form, Review Pages for SD, LA,SF restaurants, LA Restaurant page |
+|Shreya| Database SQL https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L53-L63 https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L98-L158, Review Form https://github.com/ShreyaV-05/Buffalos/blob/main/templates/responserev.html, Review Pages for SD, LA,SF restaurants https://github.com/ShreyaV-05/Buffalos/blob/main/templates/rating.html, LA Restaurant page https://github.com/ShreyaV-05/Buffalos/blob/main/templates/losangeles.html |
 
 
 ## Authors
