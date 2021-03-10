@@ -177,7 +177,7 @@ def tictactoe_route():
 @app.route('/random/', methods=['GET', 'POST'])
 def random():
     # call to random number web api
-    url = 'https://csrng.net/csrng/csrng.php?min=1&max=5'
+    url = 'https://csrng.net/csrng/csrng.php?min=1&max=6'
     resp = requests.get(url)
 
     # formatting variables from return
