@@ -40,7 +40,7 @@ Our current web pages on the running site include:
 # Technicals achieved
 | Author| Contributions/Technicals |
 | -------- | ----------- |
-|Andrea| CRUD database (coming soon page): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/coming_soon.html  https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L28-L75  https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L256-L302, rest/web api (pick for me! tab): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/random.html  https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L177-L187, San Diego Restaurant page: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/sandiego.html |
+|Andrea| CRUD database (coming soon page): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/coming_soon.html - https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L28-L75 - https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L256-L302, rest/web api (pick for me! tab): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/random.html - https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L177-L187, San Diego Restaurant page: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/sandiego.html |
 |Diane| Raspberry Pi/deployment (site deployed and running), Tic-Tac-Toe that leads to easter egg, drop-down menu, web page design (LA, SF, Easter Egg, Home)|
 |Shreya| Database SQL: Link to app.py to create table and query through data: https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L53-L63 https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L98-L158, Review Form: Link to HTML: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/responserev.html Link for website:http://72.197.230.181:8080/responserev/ , Review Pages for SD, LA,SF restaurants: Link to template: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/rating.html Link for SD Review Page (others follow similar pattern):http://72.197.230.181:8080/SDREV/ , LA Restaurant page Link to HTML: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/losangeles.html Link on website:http://72.197.230.181:8080/losangeles/  |
 
@@ -55,8 +55,10 @@ Our current web pages on the running site include:
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
 * [College Board Requirements](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)
-* 
-# February 19: Project Review
+
+
+# Big Ticket History
+## February 19: Project Review
 |Tab  |Link to Code |
 | --- |           ---           |
 |Diane's Ticket: College Board Requirements (Easter Egg)| https://github.com/ShreyaV-05/Buffalos/blob/main/templates/easteregg.html|
@@ -69,7 +71,8 @@ Our current web pages on the running site include:
 |Diane's Ticket: Restuarants Drop Down Menu| Navigation Bar: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Homepage link: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/home.html Restaurant base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/restaurantbase.html Base: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html|
 |Los Angeles Tab|Frontend Code:https://github.com/ShreyaV-05/Buffalos/blob/ad84d45a6a9a3713e6e052f962d4b71c0d477f27/templates/losangeles.html#L1-L145 |
 |Future Plans| For the dashboard that each user has we will use coding similar to what our crossover group had for the evaluation pages but instead allowing the user to rate favorite restuarants and rank by prices. Here is a link to their code that we have been looking over at: https://github.com/LordRoop/P4-Ducks/blob/6d677c0c39cd48fde398a158b4cb150c2232b675/templates/math.html#L66-L278 |
-# February 17: Cross-over Grading
+
+## February 17: Cross-over Grading
 |Requirements|Comments|
 |---| --- |
 |Clone, Run, Code Organization: 5/5| Code looks very organized. All pages of the code are in folders and were easy to find. Their code runs correctly and smoothly. Everyone is able to clone the code from GitHub and contribute to the project.|
@@ -82,21 +85,21 @@ Our current web pages on the running site include:
 |Recommendations for enhancements | Need to work on updating and deleting from the database. They should also change the background colour for their random restaurant chooser to a more vibrant green or blue. They can also work on how they present the result of the random restaurant. For example, they can add a wheel to get a random spin so it is more appealing to the users. |
 
 
-# January 15 - Big Tickets
+## January 15 - Big Tickets
 |Big Tickets   |Assigned To   |Description   |Grade   |
 |---|---|---|---|
 |Ticket 1: Response form    |Shreya   |Link to folder with all pages relating to code: https://github.com/ShreyaV-05/Buffalos/tree/main/resprev This ticket is about the response form in which the user will select a restaurant to offer a review and a rating. On the scrum board it is in the completed section (https://github.com/ShreyaV-05/Buffalos/projects/1).| 19/20  |
 |Ticket 2: Recommendation page   |Andrea   |Front end html code: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/recommend.html and link to back end code (still a work in progress): https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L122 (lines 122-182). This ticket is about the recommendation page (which will be a part of the nav bar) where users will be able to recommend more types of cuisines and specific restuarants they would like to see added to the website in the future. On the srum board, the front end is in the "ready to deploy column" and the back end of this page is in the "in progress" column as I am still working through errors: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937575, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52937578  | 19/20  |
 |Ticket 3: Drop Down Menu, Deployment (given extension due to technical errors)   |Diane   |Fixed drop-down menu (menu originally did not register when I hovered over it): https://github.com/ShreyaV-05/Buffalos/blob/main/templates/base.html, https://github.com/ShreyaV-05/Buffalos/tree/main/static. Also worked on deployment but per our discussion on Friday, I am restarting with Raspberry Pi and am still working on it over the weekend. On scrumboard, dropdown is complete: https://github.com/ShreyaV-05/Buffalos/projects/1#card-52420810.   | 18/20  |
 
-# January 28: Ticket Plans for Week 2/1-2/5
+## January 28: Ticket Plans for Week 2/1-2/5
 |Tickets   |Assigned To   |Description   |Scrumboard   |
 |---|---|---|---|
 |Ticket 1: Review Page/ Login Page/ Sessions Ticket  |Shreya   |Changed the response form so that it shows the different restaurants that are in the website and changed all the code in the tables to reflect that(eventually will figure out how to code so that there are subcategories under cuisinesbut may not happen). Made a new tab that has the resturant names bolded and under them there are the reviews (will try to see if I can include the ratings as well so user can see what people have rated the restaurant out of 5 stars). If time work on login page frontend and start backend (or if the review page is too hard to generate within a week), which would include code for the sessions.| https://github.com/ShreyaV-05/Buffalos/projects/1#card-52455899, https://github.com/ShreyaV-05/Buffalos/projects/1#card-52914573, https://github.com/ShreyaV-05/Buffalos/projects/1#card-53776747, https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804584  |
 |Ticket 2: "Coming Soon" Page   |Andrea   |"Coming Soon" Page will consist of a table of cuisines that will be "coming soon" to the website. Will use meta data to be able to sort the cuisines by location (San Diego, Los Angeles, San Francisco) and possibly by the general price as well ($,$$,$$$)  | https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804462  |
 |Ticket 3: Easter Egg with page   |Diane   |Create a page holding exam resources such as journals, articles/sites, TPTs, slideshows. I want to try to create a secret "passageway" to the page. An idea I have right now is the search bar where if you search up "buffalos" it will direct you to the page. We are also planning on changing the searchbar to a logo/picture tab thing.   | https://github.com/ShreyaV-05/Buffalos/projects/1#card-53778656  |
 
-# Feburary 5: Tickets and Easter Egg
+## Feburary 5: Tickets and Easter Egg
 | Ticket | Assigned To | Description | Link to Code | Link to Scrum Board |
 | --- | --- |           ---           | --- | --- |
 | Coming Soon Page | Andrea | Page with table of cuisines, user can create/add a cuisine to the list. Later will filter the data so there will be options to only view cuisines of a certain location or a certain price. | `frontend form:` https://github.com/ShreyaV-05/Buffalos/blob/main/templates/coming_soon.html<br/> `establishing table and creating database:` https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L63-L84<br/>`showing old items and adding items into table:` https://github.com/ShreyaV-05/Buffalos/blob/main/app.py#L246-L268  | https://github.com/ShreyaV-05/Buffalos/projects/1#card-53804462,     https://github.com/ShreyaV-05/Buffalos/projects/1#card-54323634 |
