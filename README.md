@@ -6,6 +6,11 @@ Hi! This is our Cuisine Website Project! by p4 Buffalo during winter 2020.
 ## Website Summary
 Because our group is full of foodies, we want to show our love and appreciation for different cuisines through our website. In this website, you can look through different cuisines in three Californian cities: San Fransisco, Los Angeles, and San Diego. These cuisines will have restaurant suggestions and reviews from online sources.
 There will be different restuarants information avaliable on each page sorted by location all falling under different cuisines.
+## Authors
+* Andrea Abed
+* Diane Tang
+* Shreya Vasant
+
 # Original Plans for Website
 * 3 tabs separated by place (SF, LA, SD)
 * has about 6 restaurants each
@@ -45,12 +50,7 @@ Our current web pages on the running site include:
 |Shreya| Database SQL: Link to app.py to create table and query through data: https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L53-L63 https://github.com/ShreyaV-05/Buffalos/blob/2fd9d2373937ac72c0ba0aa9de543c5914c11422/app.py#L98-L158, Review Form: Link to HTML: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/responserev.html Link for website:http://72.197.230.181:8080/responserev/ , Review Pages for SD, LA,SF restaurants: Link to template: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/rating.html Link for SD Review Page (others follow similar pattern):http://72.197.230.181:8080/SDREV/ , LA Restaurant page Link to HTML: https://github.com/ShreyaV-05/Buffalos/blob/main/templates/losangeles.html Link on website:http://72.197.230.181:8080/losangeles/  |
 
 
-## Authors
-* Andrea Abed
-* Diane Tang
-* Shreya Vasant
-* 
-## Links
+# Links
 * [Runtime Link](http://72.197.230.181:8080/)
 * [Project Plan](https://docs.google.com/document/d/1dLMqnZHEYWIKWwu43sF4bD4V1O_2SbfBQtig9rhmOKI/edit?usp=sharing)
 * [GitHub Repos](https://github.com/ShreyaV-05/Buffalos/blob/main/README.md)
